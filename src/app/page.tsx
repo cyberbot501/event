@@ -5,7 +5,9 @@ import Link from "next/link";
 export default function Home() {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Gallery", href: "#gallery" }
+    { name: "Gallery", href: "/#gallery" },
+    { name: "Schedule", href: "#" },
+    { name: "Tributes", href: "#" }
   ];
 
   const heroImages = [
@@ -25,14 +27,14 @@ export default function Home() {
     { category: "BONDING", title: "Family", image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80", link: "/family" },
     { category: "SERVICE", title: "Ministry", image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&q=80", link: "/ministry" },
     { category: "IMPACT", title: "Legacy", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80", link: "/legacy" },
-    { category: "CELEBRATION", title: "Birthday", image: "https://images.unsplash.com/photo-1530103862676-de3c9de59a9f?w=600&q=80", link: "/birthday" },
+    // { category: "CELEBRATION", title: "Birthday", image: "https://images.unsplash.com/photo-1530103862676-de3c9de59a9f?w=600&q=80", link: "/birthday" },
   ];
 
   return (
     <div className="min-h-screen bg-[#FDF5E6] text-[#0A192F] font-sans selection:bg-[#1D4A77] selection:text-white relative overflow-hidden">
 
       {/* Floating Side Menu */}
-      <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-[2px] items-end">
+      {/* <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-[2px] items-end">
         {floatingButtons.map((btn, i) => (
           <button key={i} className="group flex items-center flex-row-reverse bg-[#E59025] hover:bg-[#D48015] transition-colors rounded-l-md overflow-hidden cursor-pointer h-12 shadow-md">
             <div className="w-12 h-12 shrink-0 flex items-center justify-center relative z-10 bg-[#E59025] group-hover:bg-[#D48015]">
@@ -43,10 +45,10 @@ export default function Home() {
             </div>
           </button>
         ))}
-      </div>
+      </div> */}
 
       {/* Floating Presale Chat */}
-      <div className="fixed left-8 bottom-8 z-50 flex items-end gap-4 pointer-events-none">
+      {/* <div className="fixed left-8 bottom-8 z-50 flex items-end gap-4 pointer-events-none">
         <div className="relative pointer-events-auto">
           <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=200&h=200&fit=crop" alt="Balloon" className="absolute -bottom-8 -left-8 w-32 h-32 object-cover rounded-full mix-blend-multiply opacity-50 -z-10 pointer-events-none" />
           <button className="bg-[#4CAF50] hover:bg-[#45a049] text-white rounded-full p-4 shadow-xl shadow-green-500/30 flex items-center justify-center transition-transform hover:scale-105 z-10 relative">
@@ -57,7 +59,7 @@ export default function Home() {
           Send Wishes
           <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-4 h-4 bg-white rotate-45 rounded-sm"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Floating Scroll to Top */}
       <button className="fixed right-8 bottom-8 z-50 bg-[#0A192F] hover:bg-[#1D4A77] text-white rounded-full p-4 shadow-lg transition-transform hover:scale-105 pointer-events-auto">
@@ -99,7 +101,7 @@ export default function Home() {
               </a>
             ))}
           </nav>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 md:hidden">
             <button className="text-[#0A192F] hover:text-[#C49B5A] transition-colors">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
             </button>
