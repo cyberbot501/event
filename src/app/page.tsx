@@ -33,33 +33,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#FDF5E6] text-[#0A192F] font-sans selection:bg-[#1D4A77] selection:text-white relative overflow-hidden">
 
-      {/* Floating Side Menu */}
-      {/* <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-[2px] items-end">
-        {floatingButtons.map((btn, i) => (
-          <button key={i} className="group flex items-center flex-row-reverse bg-[#E59025] hover:bg-[#D48015] transition-colors rounded-l-md overflow-hidden cursor-pointer h-12 shadow-md">
-            <div className="w-12 h-12 shrink-0 flex items-center justify-center relative z-10 bg-[#E59025] group-hover:bg-[#D48015]">
-              {btn.icon}
-            </div>
-            <div className="max-w-0 group-hover:max-w-[200px] overflow-hidden transition-all duration-300 ease-in-out whitespace-nowrap h-full flex items-center justify-end bg-[#D48015]">
-              <span className="text-white font-medium pl-4 pr-2 text-sm">{btn.label}</span>
-            </div>
-          </button>
-        ))}
-      </div> */}
 
-      {/* Floating Presale Chat */}
-      {/* <div className="fixed left-8 bottom-8 z-50 flex items-end gap-4 pointer-events-none">
-        <div className="relative pointer-events-auto">
-          <img src="https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=200&h=200&fit=crop" alt="Balloon" className="absolute -bottom-8 -left-8 w-32 h-32 object-cover rounded-full mix-blend-multiply opacity-50 -z-10 pointer-events-none" />
-          <button className="bg-[#4CAF50] hover:bg-[#45a049] text-white rounded-full p-4 shadow-xl shadow-green-500/30 flex items-center justify-center transition-transform hover:scale-105 z-10 relative">
-            <MessageSquare className="w-8 h-8" fill="currentColor" />
-          </button>
-        </div>
-        <div className="bg-white py-3 px-6 rounded-md shadow-xl text-sm font-semibold text-gray-800 pointer-events-auto mb-2 relative flex items-center">
-          Send Wishes
-          <div className="absolute top-1/2 -left-2 -translate-y-1/2 w-4 h-4 bg-white rotate-45 rounded-sm"></div>
-        </div>
-      </div> */}
+
 
       {/* Floating Scroll to Top */}
       <button className="fixed right-8 bottom-8 z-50 bg-[#0A192F] hover:bg-[#1D4A77] text-white rounded-full p-4 shadow-lg transition-transform hover:scale-105 pointer-events-auto">
@@ -113,9 +88,6 @@ export default function Home() {
           <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif tracking-tighter leading-none text-[#0A192F]">
             Travis <span className="italic block mt-[-20px] md:mt-[-40px]">Uche</span>
           </h1>
-          <div className="absolute bottom-[-100px] text-sm uppercase tracking-widest flex items-center gap-2 font-bold text-[#0A192F] cursor-pointer hover:text-[#C49B5A] transition-colors">
-            Scroll Down <ArrowRight className="w-4 h-4 rotate-90" />
-          </div>
         </div>
       </section>
 
