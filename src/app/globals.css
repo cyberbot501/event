@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-beige-100: #FDF5E6;
+  --color-beige-200: #FAF0E6;
+  --color-beige-300: #F5F5DC;
+  --color-beige-400: #EADDCD;
+  --color-beige-500: #D8C3A5;
+
+  --color-navy-700: #1D4A77;
+  --color-navy-800: #0A192F;
+  --color-navy-900: #000080;
+
+  --color-accent-pink: #FF1493;
+  --color-accent-orange: #FFA500;
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Times New Roman", Times, serif;
+
+  --animate-carousel-slide: carousel-slide 20s linear infinite;
+
+  @keyframes carousel-slide {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+:root {
+  --background: var(--color-beige-100);
+  --foreground: var(--color-navy-900);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+}
+
+/* Custom styles, like the animated slider track */
+.slider-track {
+  display: flex;
+  width: calc(100vw * 2);
+  /* Double width for smooth loop */
+  animation: slide 30s linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
