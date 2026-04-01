@@ -6,8 +6,8 @@ export default function Home() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Gallery", href: "/#gallery" },
-    { name: "Schedule", href: "#" },
-    { name: "Tributes", href: "#" }
+    { name: "Schedule", href: "/#schedule" },
+    { name: "Tributes", href: "/tributes" }
   ];
 
   const heroImages = [
@@ -199,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* Planning Steps Vertical Timeline Section */}
-      <section className="py-32 px-4 md:px-8 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 relative bg-[#FAF0E6]/50">
+      <section id="schedule" className="py-32 px-4 md:px-8 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 relative bg-[#FAF0E6]/50">
         <div className="md:col-span-4 pl-4 md:pl-8">
           <p className="text-xs font-bold tracking-widest uppercase mb-4 text-[#C49B5A]">Event Schedule</p>
           <h2 className="text-5xl md:text-6xl font-serif leading-tight mb-8 text-[#0A192F]">

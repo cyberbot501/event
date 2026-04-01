@@ -9,7 +9,7 @@ export default function FamilyPage() {
     ];
 
     return (
-        <div className="min-h-screen bg-[#0A0A0A] text-white font-sans overflow-hidden">
+        <div className="min-h-screen bg-[#FDF5E6] text-white font-sans overflow-hidden">
             <div className="max-w-5xl mx-auto px-6 py-12 md:py-20">
                 <Link href="/" className="inline-flex items-center text-[#C49B5A] text-[10px] md:text-xs font-bold tracking-[0.2em] hover:text-white transition-colors mb-16 md:mb-24 uppercase">
                     <span className="mr-4 text-base">←</span> Back to Home
