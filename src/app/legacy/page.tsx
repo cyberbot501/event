@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import church1 from "../assets/legacy/legacy1.png"
-import church2 from "../assets/legacy/legacy2.png"
-import church3 from "../assets/legacy/legacy3.png"
+import church1 from "../assets/legacy/1D624C6C-4C54-4F8C-8C13-92702FBCC13E.jpg"
+import church2 from "../assets/legacy/9B0A5708-5B80-4024-B896-0BE0BF4A7AED.jpg"
+import church3 from "../assets/legacy/IMG_5490_jpg.jpg"
 
 export default function LegacyPage() {
     const images = [

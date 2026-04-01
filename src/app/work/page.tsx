@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import church1 from "../assets/legacy/work1.png"
-import church2 from "../assets/legacy/work2.png"
-import church3 from "../assets/legacy/work3.png"
+import church1 from "../assets/legacy/IMG_9267.jpg"
+import church2 from "../assets/legacy/IMG_9267.jpg"
+import church3 from "../assets/legacy/IMG_5490_jpg.jpg"
 
 
 export default function WorkPage() {
