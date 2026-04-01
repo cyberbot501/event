@@ -1,11 +1,16 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import bio1 from "../assets/Childhood/child1.png"
+import bio2 from "../assets/Childhood/child2.png"
+import bio3 from "../assets/Childhood/child3.png"
 
 export default function ChildhoodPage() {
     const images = [
-        "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=1200&q=80",
-        "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80",
-        "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&q=80",
-        "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&h=800&fit=crop&q=80",
+        bio1,
+        bio2,
+        bio3,
+        bio1,
+
     ];
 
     return (
@@ -35,17 +40,17 @@ export default function ChildhoodPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
                     {/* Top spanning width */}
                     <div className="md:col-span-3 h-[300px] md:h-[450px]">
-                        <img src={images[0]} alt="Childhood moment" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image src={images[0]} alt="Childhood moment" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     {/* Bottom three */}
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[1]} alt="Family" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image src={images[1]} alt="Family" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[2]} alt="Friends" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image src={images[2]} alt="Friends" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[3]} alt="Portrait" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
+                        <Image src={images[3]} alt="Portrait" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
                     </div>
                 </div>
 

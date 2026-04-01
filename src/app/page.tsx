@@ -5,23 +5,34 @@ import { MobileMenu } from "@/components/MobileMenu";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { Biography } from "@/components/Biography";
 import Image from "next/image";
-import logo from "./assets/LUMINOUS-LAMBENT-BLACK-AND-GOLD.png"
+import logo from "./assets/LUMINOUS-LAMBENT-GOLD.png"
+import slide1 from "./assets/slide1.png"
+import slide2 from "./assets/slide2.png"
+import slide3 from "./assets/slide3.png"
+import slide4 from "./assets/slide5.png"
+import bio1 from "./assets/bio1.png"
+import bio2 from "./assets/bio2.png"
+
+
+
+
+
 
 export default function Home() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Gallery", href: "/#gallery" },
     { name: "Schedule", href: "/#schedule" },
-    { name: "Tributes", href: "/tributes" }
+    { name: "Tributes", href: "/tributes" },
+    { name: "Gift Registry", href: "/gift-registry" }
+
   ];
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80",
-    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80",
-    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80",
-    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80",
-
-
+    slide1,
+    slide2,
+    slide3,
+    slide4,
   ];
 
   const floatingButtons = [
@@ -154,10 +165,10 @@ export default function Home() {
       <section className="py-24 max-w-7xl mx-auto px-8 relative">
         <div className="flex flex-col md:flex-row gap-12 mb-20">
           <div className="w-full md:w-1/3">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80" alt="Travis Portrait" className="w-full h-auto object-cover rounded-sm shadow-lg grayscale hover:grayscale-0 transition-all duration-1000" />
+            <Image src={bio1} alt="Travis Portrait" className="w-full h-auto object-cover rounded-sm shadow-lg grayscale hover:grayscale-0 transition-all duration-1000" />
           </div>
           <div className="w-full md:w-2/3 mt-12 md:mt-24">
-            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=1000&q=80" alt="Group of friends" className="w-full h-[500px] object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition-all duration-1000" />
+            <Image src={bio2} alt="Group of friends" className="w-full h-[500px] object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition-all duration-1000" />
           </div>
         </div>
 
@@ -166,7 +177,7 @@ export default function Home() {
 
       {/* Banner CTA Section */}
       <section className="w-full relative h-[600px] flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80" alt="Celebration party" className="absolute inset-0 w-full h-full object-cover" />
+        <Image src={slide1} alt="Celebration party" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#0A192F]/70"></div>
         <div className="relative z-10 text-center flex flex-col items-center">
           <p className="text-[#C49B5A] text-sm font-bold tracking-widest uppercase mb-6">Join the Celebration</p>
@@ -225,13 +236,9 @@ export default function Home() {
       {/* Footer minimal */}
       <footer className="bg-[#0A192F] text-[#FDF5E6] py-16 text-center border-t-4 border-[#C49B5A]">
         <div className="flex flex-col items-center justify-center mt-2 group cursor-pointer mb-8">
-          <span className="text-[10px] tracking-[0.3em] uppercase text-[#C49B5A] font-semibold mb-[-8px] transition-all group-hover:tracking-[0.4em] z-10">Celebrating The</span>
-          <div className="text-4xl md:text-5xl font-bold tracking-tighter text-[#C49B5A] leading-none text-center" style={{ fontFamily: "Georgia, serif" }}>
-            Luminous <br />
-            <span className="ml-12 italic">Lambent</span>
-          </div>
+          <Image src={logo} alt="Logo" className="w-[200px] h-[200px]" />
         </div>
-        <p className="text-[#FDF5E6]/60 mb-8">© 2026 Travis Uche Celebration. All rights reserved.</p>
+        <p className="text-[#FDF5E6]/60 mb-8">© Courtesy: Team Xanotech</p>
       </footer>
 
     </div>

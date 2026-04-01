@@ -4,8 +4,9 @@ import React, { useCallback, useEffect, useState } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { StaticImageData } from 'next/image';
 
-export function HeroCarousel({ images }: { images: string[] }) {
+export function HeroCarousel({ images }: { images: (string | StaticImageData)[] }) {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 40 }, [
         Autoplay({ delay: 5000, stopOnInteraction: false })
     ]);
@@ -34,7 +35,7 @@ export function HeroCarousel({ images }: { images: string[] }) {
             <div className="flex h-full w-full">
                 {images.map((src, i) => (
                     <div className="relative flex-[0_0_100%] min-w-0 h-full" key={i}>
-                        <img src={src} alt={`Slide ${i}`} className="absolute inset-0 w-full h-full object-cover object-center" />
+                        <img src={typeof src === 'string' ? src : src.src} alt={`Slide ${i}`} className="absolute inset-0 w-full h-full object-cover object-center" />
 
                     </div>
                 ))}
