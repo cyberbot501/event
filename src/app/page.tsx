@@ -134,18 +134,18 @@ export default function Home() {
           <h2 className="text-sm font-bold tracking-widest uppercase mb-4 text-[#C49B5A]">Life Galleries</h2>
           <h3 className="text-4xl font-serif text-[#0A192F]">Explore the memories</h3>
         </div>
-        <div className="flex w-full h-[500px] md:h-[600px] gap-2 md:gap-4">
+        <div className="flex flex-col md:flex-row w-full h-auto md:h-[600px] gap-6 md:gap-4">
           {galleryItems.map((item, index) => (
-            <Link href={item.link} key={index} className="group flex flex-col flex-1 hover:flex-[3] transition-all duration-700 ease-in-out cursor-pointer h-full bg-white shadow-md rounded-md overflow-hidden">
-              <div className="w-full h-full group-hover:h-[70%] transition-all duration-700 ease-in-out overflow-hidden relative">
-                <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500"></div>
+            <Link href={item.link} key={index} className="group flex flex-col md:flex-1 md:hover:flex-[3] transition-all duration-700 ease-in-out cursor-pointer md:h-full bg-white shadow-md rounded-md overflow-hidden">
+              <div className="w-full h-[250px] md:h-full md:group-hover:h-[70%] transition-all duration-700 ease-in-out overflow-hidden relative shrink-0">
+                <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105" />
+                <div className="absolute inset-0 bg-black/10 md:group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
-              <div className="w-full h-0 group-hover:h-[30%] opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out bg-white overflow-hidden flex flex-col justify-center">
-                <div className="pt-4 md:pt-6 px-4 md:px-8">
+              <div className="w-full h-auto opacity-100 md:h-0 md:group-hover:h-[30%] md:opacity-0 md:group-hover:opacity-100 transition-all duration-700 ease-in-out bg-white overflow-hidden flex flex-col justify-center">
+                <div className="py-6 px-6 md:pt-6 md:px-8">
                   <p className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#C49B5A] mb-1 md:mb-2">{item.category}</p>
                   <h3 className="text-2xl md:text-4xl font-serif text-[#0A192F] mb-2 md:mb-4 whitespace-nowrap overflow-hidden text-ellipsis">{item.title}</h3>
-                  <span className="text-xs md:text-sm font-medium border-b border-black md:pb-1 inline-flex items-center gap-1 w-max">
+                  <span className="text-xs md:text-sm font-medium border-b border-black pb-1 inline-flex items-center gap-1 w-max transition-colors hover:text-[#C49B5A] hover:border-[#C49B5A]">
                     View Album <ArrowUpRight className="w-3 h-3 md:w-4 md:h-4 text-[#C49B5A]" />
                   </span>
                 </div>
