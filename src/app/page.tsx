@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageSquare, ShoppingCart, Image as ImageIcon, Folder, ArrowRight, ArrowUp, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import { MobileMenu } from "@/components/MobileMenu";
 
 export default function Home() {
   const navLinks = [
@@ -76,10 +77,8 @@ export default function Home() {
               </a>
             ))}
           </nav>
-          <div className="flex items-center gap-4 md:hidden">
-            <button className="text-[#0A192F] hover:text-[#C49B5A] transition-colors">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-            </button>
+          <div className="flex items-center gap-4">
+            <MobileMenu navLinks={navLinks} />
           </div>
         </header>
 
@@ -192,9 +191,11 @@ export default function Home() {
             Celebrating the legacy <br />
             <span className="italic">of Travis Uche</span>
           </h2>
-          <Button className="bg-[#C49B5A] hover:bg-[#b08b51] text-white rounded-full px-10 py-6 text-lg font-bold border-none cursor-pointer">
-            RSVP Now
-          </Button>
+          <Link href="/rsvp">
+            <Button className="bg-[#C49B5A] hover:bg-[#b08b51] text-white rounded-full px-10 py-6 text-lg font-bold border-none cursor-pointer">
+              RSVP Now
+            </Button>
+          </Link>
         </div>
       </section>
 
