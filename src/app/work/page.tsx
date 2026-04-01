@@ -1,11 +1,16 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import church1 from "../assets/legacy/work1.png"
+import church2 from "../assets/legacy/work2.png"
+import church3 from "../assets/legacy/work3.png"
+
 
 export default function WorkPage() {
     const images = [
-        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
-        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80",
-        "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?w=600&q=80",
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=800&fit=crop&q=80",
+        church1,
+        church2,
+        church3,
+
     ];
 
     return (
@@ -37,17 +42,15 @@ export default function WorkPage() {
                 {/* Masonry-style Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
                     <div className="md:col-span-3 h-[300px] md:h-[450px]">
-                        <img src={images[0]} alt="Celebration" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[0]} alt="Celebration" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[1]} alt="Event" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[1]} alt="Event" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[2]} alt="Presents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[2]} alt="Presents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[3]} alt="Party" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
-                    </div>
+
                 </div>
 
                 <div className="text-center pb-12 md:pb-20">

@@ -1,11 +1,16 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import church1 from "../assets/ministry/church.png"
+import church2 from "../assets/ministry/church2.png"
+import church3 from "../assets/ministry/church3.png"
+import church4 from "../assets/ministry/church6.png"
 
 export default function MinistryPage() {
     const images = [
-        "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1200&q=80",
-        "https://images.unsplash.com/photo-1544621006-259837a77e8f?w=600&q=80",
-        "https://images.unsplash.com/photo-1490730141103-6cac27aaab94?w=600&q=80",
-        "https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=800&fit=crop&q=80",
+        church1,
+        church2,
+        church3,
+        church4,
     ];
 
     return (
@@ -43,16 +48,16 @@ export default function MinistryPage() {
                 {/* Masonry-style Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
                     <div className="md:col-span-3 h-[300px] md:h-[450px]">
-                        <img src={images[0]} alt="Community service" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[0]} alt="Community service" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[1]} alt="Mentorship" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[1]} alt="Mentorship" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[2]} alt="Leadership" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[2]} alt="Leadership" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[3]} alt="Helping hands" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
+                        <Image priority src={images[3]} alt="Helping hands" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
                     </div>
                 </div>
 
