@@ -37,10 +37,6 @@ export default function Home() {
 
 
 
-      {/* Floating Scroll to Top */}
-      <button className="fixed right-8 bottom-8 z-50 bg-[#0A192F] hover:bg-[#1D4A77] text-white rounded-full p-4 shadow-lg transition-transform hover:scale-105 pointer-events-auto">
-        <ArrowUp className="w-5 h-5" />
-      </button>
 
       {/* Hero Section */}
       <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
