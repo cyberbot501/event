@@ -169,7 +169,7 @@ export default function Home() {
             <Image priority src={bio1} alt="Travis Portrait" className="w-full h-auto object-cover rounded-sm shadow-lg grayscale hover:grayscale-0 transition-all duration-1000" />
           </div>
           <div className="w-full md:w-2/3 mt-12 md:mt-24">
-            <Image priority src={bio2} alt="Group of friends" className="w-full h-[500px] object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition-all duration-1000" />
+            <Image priority src={slide5} alt="Group of friends" className="w-full h-[500px] object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition-all duration-1000" />
           </div>
         </div>
 
@@ -186,7 +186,7 @@ export default function Home() {
             Celebrating the legacy <br />
             <span className="italic">of Travis Uche</span>
           </h2>
-          <Link href="/rsvp">
+          <Link href="https://forms.gle/wQxJ9RKHwYRRfnms9">
             <Button className="bg-[#C49B5A] hover:bg-[#b08b51] text-white rounded-full px-10 py-6 text-lg font-bold border-none cursor-pointer">
               RSVP Now
             </Button>
