@@ -236,7 +236,7 @@ export default function Home() {
       {/* Footer minimal */}
       <footer className="bg-[#0A192F] text-[#FDF5E6] py-16 text-center border-t-4 border-[#C49B5A]">
         <div className="flex flex-col items-center justify-center mt-2 group cursor-pointer mb-8">
-          <Image src={logo} alt="Logo" className="w-[200px] h-[200px]" />
+          <Image src={logo} alt="Logo" className="w-[150px] h-[150px]" />
         </div>
         <p className="text-[#FDF5E6]/60 mb-8">© Courtesy: Team Xanotech</p>
       </footer>
