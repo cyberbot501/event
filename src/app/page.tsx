@@ -2,6 +2,9 @@ import { Button } from "@/components/ui/button";
 import { MessageSquare, ShoppingCart, Image as ImageIcon, Folder, ArrowRight, ArrowUp, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { MobileMenu } from "@/components/MobileMenu";
+import { HeroCarousel } from "@/components/HeroCarousel";
+import Image from "next/image";
+import logo from "./assets/LUMINOUS-LAMBENT-BLACK-AND-GOLD.png"
 
 export default function Home() {
   const navLinks = [
@@ -12,9 +15,12 @@ export default function Home() {
   ];
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1530103862676-de3c9de59a9f?w=1600&q=80",
-    "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=1600&q=80",
-    "https://images.unsplash.com/photo-1464047736614-af63643285bf?w=1600&q=80",
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80",
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80",
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80",
+    "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80",
+
+
   ];
 
   const floatingButtons = [
@@ -28,7 +34,7 @@ export default function Home() {
     { category: "BONDING", title: "Family", image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80", link: "/family" },
     { category: "SERVICE", title: "Ministry", image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&q=80", link: "/ministry" },
     { category: "IMPACT", title: "Legacy", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80", link: "/legacy" },
-    // { category: "CELEBRATION", title: "Birthday", image: "https://images.unsplash.com/photo-1530103862676-de3c9de59a9f?w=600&q=80", link: "/birthday" },
+    { category: "ENTERPRISE", title: "Work, Leadership", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80", link: "/work" },
   ];
 
   return (
@@ -39,38 +45,29 @@ export default function Home() {
 
 
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex flex-col items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-40">
-          <div className="slider-track h-full">
-            {[...heroImages, ...heroImages].map((src, i) => (
-              <div key={i} className="w-[100vw] h-full flex-shrink-0 relative">
-                <img src={src} className="w-full h-full object-cover object-center" alt="" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#FDF5E6] via-transparent to-transparent"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-[#FDF5E6]/80 via-transparent to-[#FDF5E6]/80"></div>
-              </div>
-            ))}
-          </div>
-        </div>
+      <section className="relative h-[85vh] md:h-screen w-full flex flex-col items-center justify-center overflow-hidden">
+        <HeroCarousel images={heroImages} />
 
         <header className="absolute top-0 w-full z-20 flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-          {/* Custom Luminous Lambent Logo */}
-          <div className="flex flex-col items-center justify-center mt-2 group cursor-pointer relative top-2">
-            <span className="text-[10px] tracking-[0.3em] uppercase text-[#C49B5A] font-semibold mb-[-8px] transition-all group-hover:tracking-[0.4em] z-10 bg-[#FDF5E6]/80 px-2 rounded-full">Celebrating The</span>
-            <div className="text-4xl md:text-5xl font-bold tracking-tighter text-[#C49B5A] leading-none text-center" style={{ fontFamily: "Georgia, serif" }}>
+          {/* Custom Luminous Lambent Logo - Adjusted for dark background */}
+          <div className="flex flex-col items-center justify-center mt-[-60] group cursor-pointer relative top-2">
+            {/* <span className="text-[10px] tracking-[0.3em] uppercase text-[#C49B5A] font-semibold mb-[-8px] transition-all group-hover:tracking-[0.4em] z-10 px-2 rounded-full drop-shadow-md">Celebrating The</span>
+            <div className="text-4xl md:text-5xl font-bold tracking-tighter text-[#FDF5E6] leading-none text-center drop-shadow-md" style={{ fontFamily: "Georgia, serif" }}>
               Luminous <br />
-              <span className="ml-12 italic">Lambent</span>
+              <span className="ml-12 italic text-[#C49B5A]">Lambent</span>
             </div>
-            <div className="text-[10px] tracking-widest font-black self-end mt-[-10px] mr-2 text-[#0A192F] bg-[#FDF5E6]/80 px-1">
+            <div className="text-[10px] tracking-widest font-black self-end mt-[-10px] mr-2 text-[#0A192F] bg-[#FDF5E6] px-1 rounded-sm shadow-sm">
               TRAVIS<br />UCHE
-            </div>
+            </div> */}
+            <Image src={logo} alt="Logo" className="w-50 h-50 object-contain" />
           </div>
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a key={link.name} href={link.href} className="text-sm font-bold hover:text-[#C49B5A] transition-colors uppercase tracking-widest relative group text-[#0A192F]">
+              <Link key={link.name} href={link.href} className="text-sm font-bold hover:text-[#C49B5A] transition-colors uppercase tracking-widest relative group text-[#FDF5E6] drop-shadow-md">
                 {link.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-[#C49B5A] transition-all group-hover:w-full"></span>
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="flex items-center gap-4">
@@ -78,9 +75,10 @@ export default function Home() {
           </div>
         </header>
 
-        <div className="relative z-10 text-center flex flex-col items-center px-4 mt-20">
-          <p className="text-lg md:text-xl font-bold tracking-widest mb-6 text-[#C49B5A] uppercase">Honoring a remarkable life</p>
-          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif tracking-tighter leading-none text-[#0A192F]">
+        {/* Hero Text */}
+        <div className="relative z-10 text-center flex flex-col items-center px-4 mt-20 pointer-events-none">
+          <p className="text-lg md:text-xl font-bold tracking-widest mb-6 text-[#C49B5A] uppercase drop-shadow-md">Honoring a remarkable life</p>
+          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif tracking-tighter leading-none text-[#FDF5E6] drop-shadow-2xl">
             Travis <span className="italic block mt-[-20px] md:mt-[-40px]">Uche</span>
           </h1>
         </div>
@@ -95,7 +93,7 @@ export default function Home() {
         <div>
           <h2 className="text-5xl md:text-6xl font-serif leading-tight mb-8">
             A Journey of<br />
-            <span className="italic">purpose</span>
+            <span className="italic font-bold text-7xl md:text-8xl">PURPOSE</span>
           </h2>
           <div className="relative mt-20">
             <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
@@ -105,11 +103,11 @@ export default function Home() {
 
         <div className="flex flex-col gap-16 pt-10">
           {[
-            { title: 'Dedication', desc: 'A lifelong commitment to uplifting those around him through selfless service and love.' },
-            { title: 'Leadership', desc: 'Guiding by example with wisdom, patience, and a vision that inspires generations.' },
-            { title: 'Compassion', desc: 'Always putting family and community first, creating a welcoming space for everyone.' }
+            { title: 'The Spark', desc: 'A lifelong commitment to uplifting those around him through selfless service and love.', link: '/spark' },
+            { title: 'The Flame', desc: 'Guiding by example with wisdom, patience, and a vision that inspires generations.', link: '/flame' },
+            { title: 'The Light', desc: 'Always putting family and community first, creating a welcoming space for everyone.', link: '/light' }
           ].map((item) => (
-            <div key={item.title} className="group cursor-pointer">
+            <Link href={item.link} key={item.title} className="group cursor-pointer block">
               <h3 className="text-4xl font-serif mb-4 flex items-center justify-between group-hover:text-[#1D4A77] transition-colors">
                 {item.title}
               </h3>
@@ -119,7 +117,7 @@ export default function Home() {
               <div className="w-8 h-8 rounded-full border border-[#0A192F] flex items-center justify-center group-hover:bg-[#0A192F] group-hover:text-white transition-all">
                 <ArrowRight className="w-4 h-4 -rotate-45" />
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </section>
@@ -165,13 +163,23 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative mb-24">
           <div className="md:col-span-3">
             <p className="text-sm font-bold tracking-widest uppercase mb-4 text-[#C49B5A]">Biography</p>
-            <h2 className="text-5xl font-serif text-[#0A192F]">Travis Uche</h2>
+            <h2 className="text-6xl md:text-7xl font-serif font-bold text-[#0A192F]">Travis Uche</h2>
           </div>
           <div className="md:col-span-4 md:col-start-5 text-[#1D4A77]/90 text-lg leading-relaxed font-medium">
-            <p className="mb-4">Travis Uche has been a beacon of light and a source of inspiration to everyone who has had the privilege of knowing him. From his early childhood marked by boundless curiosity, to his impactful years of leadership and ministry, his journey is a testament to the power of unwavering faith and dedication.</p>
+            <p className="mb-4">With nearly a decade of experience in Software Product Innovation and Development, Travis Uche is a systems thinker, entrepreneur, and versatile leader dedicated to transforming ideas, passion, and purpose into scalable digital solutions that create real-world impact for individuals, businesses, and society.<br /><br />
+
+              He grew up in a family environment shaped by entrepreneurship, alongside siblings who are also enterprise builders, an influence that deeply shaped his mindset toward innovation, ownership, and value creation from an early age. This foundation strengthened his drive to build and lead ventures that solve meaningful problems and stand the test of scale and structure.<br /><br />
+
+              He currently leads multiple cross-functional teams as Team Lead at Xanotech LTD, an enterprise software development company focused on building robust digital systems for modern organizations. He is also the Founder of Landest.co, a real estate technology platform, and Primus Suite, a Banking-as-a-Service infrastructure designed to power financial innovation and digital banking experiences across emerging and global markets.</p>
           </div>
           <div className="md:col-span-4 text-[#1D4A77]/90 text-lg leading-relaxed font-medium">
-            <p>He carries a legacy of kindness, always prioritizing the needs of his family and community. As we celebrate this remarkable milestone, we look back at the beautiful memories shared and look forward to the luminous chapters still to be written in his incredible story.</p>
+            <p>Over the years, he has led the delivery of enterprise software solutions across diverse regions, operating at the intersection of technology, governance, and impact. His expertise spans complex, cross-functional service delivery, regulatory compliance, risk management, financial services operations, cybersecurity, data privacy, electronic banking channels, workforce development, supply chain systems, and human capital management across both public and private sector environments, including federal and state-level engagements.<br /><br />
+
+              Beyond enterprise execution, Travis serves on the boards of two international financial services organizations, APDP LLC and Grain Coast Capital, where he contributes strategic direction across innovation, structure, and sustainable growth. He is also an alumnus of the Africa for Africa Youth Initiative, further reflecting his commitment to leadership, development, and continental impact.<br /><br />
+
+              At the center of his life is a deep and unwavering faith. He serves God wholeheartedly, and his love for God profoundly influences his values, decisions, and leadership philosophy. This devotion also extends into his compassion for children and his passion for nurturing growth, development, and positive environments for the next generation.<br /><br />
+
+              He is a serial founder within the African tech ecosystem, continually building enterprise technology innovations that sit at the intersection of infrastructure, intelligence, and inclusion. Through his work and his walk, he reflects a life committed not only to building systems that work, but to building systems—and a legacy—that truly matters.</p>
           </div>
           <div className="absolute top-0 right-0 w-1/2 h-[2px] bg-[#C49B5A]/20 hidden md:block mt-8"></div>
         </div>
@@ -179,7 +187,7 @@ export default function Home() {
 
       {/* Banner CTA Section */}
       <section className="w-full relative h-[600px] flex items-center justify-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1509305717900-84f40c4ca3ee?w=1600&q=80" alt="Celebration party" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1600&q=80" alt="Celebration party" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#0A192F]/70"></div>
         <div className="relative z-10 text-center flex flex-col items-center">
           <p className="text-[#C49B5A] text-sm font-bold tracking-widest uppercase mb-6">Join the Celebration</p>
@@ -196,12 +204,12 @@ export default function Home() {
       </section>
 
       {/* Planning Steps Vertical Timeline Section */}
-      <section id="schedule" className="py-32 px-4 md:px-8 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 relative bg-[#FAF0E6]/50">
+      <section id="schedule" className="py-32 px-4 md:px-8 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-36 relative bg-[#FAF0E6]/50">
         <div className="md:col-span-4 pl-4 md:pl-8">
           <p className="text-xs font-bold tracking-widest uppercase mb-4 text-[#C49B5A]">Event Schedule</p>
           <h2 className="text-5xl md:text-6xl font-serif leading-tight mb-8 text-[#0A192F]">
             The Grand <br />
-            Celebration
+            <span className="text-7xl md:text-8xl font-bold">Celebration</span>
           </h2>
           <p className="text-lg text-[#1D4A77]/70 leading-relaxed max-w-sm">
             Join us as we walk through a carefully curated sequence of events designed to honor Travis and create unforgettable memories.
@@ -214,9 +222,9 @@ export default function Home() {
 
           <div className="flex flex-col gap-16 relative z-10 w-full max-w-2xl">
             {[
-              { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" /></svg>, title: "Arrival & Welcome" },
+              { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" /></svg>, title: "All White Thanksgiving" },
               { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>, title: "Tributes & Testimonials" },
-              { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" /></svg>, title: "Gala Dinner" },
+              { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" /></svg>, title: "Roof Top Gala" },
               { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" /></svg>, title: "Dance & Celebration" }
             ].map((step, idx) => (
               <div key={idx} className="flex flex-col md:flex-row gap-8 items-start">

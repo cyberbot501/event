@@ -26,10 +26,9 @@ export default function LegacyPage() {
 
                     <div className="mt-16 text-[#A0A0A0] text-lg md:text-xl leading-relaxed font-light space-y-8">
                         <p>
-                            A true legacy unfolds not in grand stone monuments, but within the hearts and minds of the people we touch. It is measured in the quiet confidence of those we've mentored, the resilience of the communities we've built, and the enduring values passed down across generations like a sacred torch.
-                        </p>
-                        <p>
-                            Travis has created a monumental legacy of integrity and grace. His life's work stands as a guiding star for those who seek to navigate the world with purpose and compassion. The impact of his vision will continue to shape families, businesses, and communities long into the beautifully uncertain future.
+                            His vision of legacy is simple yet profound: a life that proves God can be trusted completely. He often affirms that his life is dedicated to loving God, doing what pleases Him, and living fully for Him until the rapture of the Church.<br /><br />
+
+                            In every sphere, ministry, family, and enterprise, David Travis Uche stands as a living testimony of faith in action, building a legacy that reflects God’s trustworthiness and transformative power.
                         </p>
                     </div>
                 </div>

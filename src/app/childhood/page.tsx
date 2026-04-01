@@ -26,10 +26,7 @@ export default function ChildhoodPage() {
 
                     <div className="mt-16 text-[#A0A0A0] text-lg md:text-xl leading-relaxed font-light space-y-8">
                         <p>
-                            Childhood is the golden foundation upon which the exquisite masterpiece of a life is painted. It is a vibrant mosaic of innocent laughter, boundless curiosity, and the gentle warmth of unconditional love. In those early years, the world was a sprawling playground of endless possibilities, where every sunrise held the promise of a new adventure, and every sunset carried the peaceful embrace of dreams.
-                        </p>
-                        <p>
-                            Looking back at these fragments of time, we see more than just old photographs; we see the roots of brilliance, resilience, and compassion taking hold. Every step taken taught courage, every shared moment taught kindness, and every imaginative game planted the seeds of a visionary future.
+                            He grew up in Lagos, Nigeria, in a simple and grounded environment that shaped his early understanding of life, discipline, and dependence on God. From childhood, he carried a quiet but strong leadership presence, reserved in nature, yet deeply observant, intentional, and driven. Even as a young boy, he demonstrated an entrepreneurial mindset, influenced by a family culture rooted in love, structure, and enterprise.
                         </p>
                     </div>
                 </div>

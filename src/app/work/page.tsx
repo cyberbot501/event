@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-export default function BirthdayPage() {
+export default function WorkPage() {
     const images = [
-        "https://images.unsplash.com/photo-1530103862676-de3c9de59a9f?w=1200&q=80",
-        "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=600&q=80",
-        "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=600&q=80",
-        "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=600&h=800&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+        "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80",
+        "https://images.unsplash.com/photo-1556761175-5973dc0f32d7?w=600&q=80",
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&h=800&fit=crop&q=80",
     ];
 
     return (
@@ -26,10 +26,10 @@ export default function BirthdayPage() {
 
                     <div className="mt-16 text-[#A0A0A0] text-lg md:text-xl leading-relaxed font-light space-y-8">
                         <p>
-                            To celebrate a birthday is to honor the glorious gift of life itself. It is a triumphant pause on the relentless march of time, a moment where we gather under the golden glow of joy to recognize the beauty of existence, the hurdles overcome, and the radiant promise of the road that stretches out ahead.
+                            Beyond ministry, David is a builder and innovator. Through Xanotech, Primus Suite, and Landest.co, he continues to create enterprise solutions that reflect excellence, structure, and forward-thinking leadership. His work spans technology, financial systems, and real estate innovation, all driven by a desire to solve problems and improve lives at scale.
                         </p>
                         <p>
-                            This celebration for Travis is more than just marking a chronological milestone; it is a profound expression of gratitude from everyone who has been graced by his presence. Tonight, we toast to health, to prosperity, and to the endless wellspring of love that makes every single day a masterpiece.
+                            At the core of his leadership are the values of impact, generosity, faith, and excellence. He relates with people with rare humility and kindness, making him approachable, trusted, and deeply respected. His presence is calm yet influential, always pointing people back to purpose and to God.
                         </p>
                     </div>
                 </div>

@@ -26,10 +26,9 @@ export default function FamilyPage() {
 
                     <div className="mt-16 text-[#A0A0A0] text-lg md:text-xl leading-relaxed font-light space-y-8">
                         <p>
-                            Family is not defined merely by bloodlines, but by the profound connections of the heart. It is the sanctuary where we first learn the meaning of unconditional love, the safe harbor in the storms of life, and the joyful chorus that celebrates our greatest triumphs. The family unit is the ultimate testament to endurance and unity.
-                        </p>
-                        <p>
-                            Travis has always been the anchor of his family, providing wisdom and unwavering support. Through countless dinners, heartfelt conversations, and quiet moments of shared understanding, he has built a legacy of togetherness that will echo across generations.
+                            Raised in a home surrounded by loving siblings and nurturing parents, Travis was shaped by values of discipline, integrity, and compassion. His family instilled in him both stability and ambition, creating an environment where responsibility and creativity could grow side by side.
+
+                            These early foundations became the soil in which his vision and purpose would later take root.
                         </p>
                     </div>
                 </div>

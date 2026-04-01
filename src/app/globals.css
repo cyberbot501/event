@@ -55,7 +55,29 @@ h6 {
   display: flex;
   width: calc(100vw * 2);
   /* Double width for smooth loop */
-  animation: slide 30s linear infinite;
+  animation: hero-swipe 30s linear infinite;
+}
+
+@keyframes hero-swipe {
+
+  0%,
+  28% {
+    transform: translateX(0);
+  }
+
+  33.33%,
+  61% {
+    transform: translateX(-25%);
+  }
+
+  66.66%,
+  94% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(-75%);
+  }
 }
 
 @keyframes slide {

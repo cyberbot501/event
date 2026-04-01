@@ -22,7 +22,7 @@ export function MobileMenu({ navLinks }: { navLinks: { name: string; href: strin
         <div className="md:hidden">
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`text-[#0A192F] hover:text-[#C49B5A] transition-colors relative z-50 ${isOpen ? 'fixed right-8 top-8 text-[#C49B5A]' : ''}`}
+                className={`text-white hover:text-[#C49B5A] transition-colors relative z-50 ${isOpen ? 'fixed right-8 top-8 text-[#C49B5A]' : ''}`}
                 aria-label="Toggle mobile menu"
             >
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

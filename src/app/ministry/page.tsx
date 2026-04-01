@@ -26,10 +26,16 @@ export default function MinistryPage() {
 
                     <div className="mt-16 text-[#A0A0A0] text-lg md:text-xl leading-relaxed font-light space-y-8">
                         <p>
-                            To serve others is to discover the true essence of humanity. Ministry is not confined within the walls of a building; it is a lived experience, extending a hand to the weary, offering a voice to the voiceless, and shining a light in times of darkness. It requires an immense capacity for love and an unwavering spirit of humility.
+                            A defining turning point in his life came during his teenage years, when a deep encounter with the Word of God began to reshape his identity and direction. It was in this season that his faith became personal and transformative, setting the course for the rest of his life. Through the guidance of spiritual leaders and pastors who invested in his growth, his relationship with God deepened and his passion for ministry was ignited.<br /><br />
+
+                            From those formative years, his walk with God has remained central. His life is anchored on trust in God, through every stage of childhood, adolescence, and adulthood. He is known for his deep love for God, his generous heart, and his passion for giving. <br /><br />
+
+                            This devotion naturally flows into his ministry, where he serves as a pastor and currently leads the Global City Youth Church, raising and nurturing young people across the world into a life of faith, purpose, and spiritual maturity.
                         </p>
                         <p>
-                            Through his dedicated service, Travis has impacted countless lives. Whether leading community initiatives, mentoring the youth, or simply being a pillar of strength during challenging times, his ministry has been defined by genuine compassion. Every action has rippled outward, creating waves of positive change across the community.
+                            His ministry is marked by simplicity, authenticity, and a strong emphasis on loving God wholeheartedly. He is deeply committed to helping others grow in faith, and his leadership has influenced countless young people to trust God and pursue a life of meaning and devotion. <br /><br />
+
+                            His encounters and moments of honor with spiritual fathers such as Pastor Chris Oyakhilome and his father in the faith, Pastor Chike Ume, remain significant milestones in his journey.
                         </p>
                     </div>
                 </div>
