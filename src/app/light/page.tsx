@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import lightImage from '../assets/slide3.jpeg';
 
 export default function LightPage() {
     return (
@@ -23,6 +25,10 @@ export default function LightPage() {
 
                             We celebrate the Luminous Lambent ~ Radiantly Glowing & we rejoice for His Light.</p>
                     </div>
+                </div>
+
+                <div className="flex justify-center mt-12 w-full max-w-4xl mx-auto">
+                    <Image src={lightImage} alt="The Light" className="rounded-lg shadow-2xl object-cover w-full h-[400px] md:h-[600px]" priority />
                 </div>
             </div>
         </div>
