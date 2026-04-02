@@ -18,6 +18,7 @@ import work from "./assets/work.jpeg"
 import family from "./assets/family.jpeg"
 import min from "./assets/min.jpeg"
 import child from "./assets/child.jpeg"
+import chi from "./assets/chi.jpeg"
 
 
 
@@ -49,7 +50,7 @@ export default function Home() {
   ];
 
   const galleryItems = [
-    { category: "MEMORIES", title: "Childhood", image: child, link: "/childhood" },
+    { category: "MEMORIES", title: "Childhood", image: chi, link: "/childhood" },
     { category: "BONDING", title: "Family", image: family, link: "/family" },
     { category: "SERVICE", title: "Ministry", image: min, link: "/ministry" },
     { category: "IMPACT", title: "Legacy", image: jou, link: "/legacy" },
@@ -125,7 +126,7 @@ export default function Home() {
 
         <div className="flex flex-col gap-16 pt-10">
           {[
-            { title: 'The Spark', desc: 'Guided by Faith, wisdom, patience, and a vision that inspires generations. The flame represents steady, unyielding passion.', link: '/spark' },
+            { title: 'The Spark', desc: 'A lifelong commitment to uplifting those around him through selfless service and love. Every great journey starts with a single, undeniable spark of inspiration.', link: '/spark' },
             { title: 'The Flame', desc: 'Guiding by example with wisdom, patience, and a vision that inspires generations. The flame represents the steady, unyielding passion.', link: '/flame' },
             { title: 'The Light', desc: 'Resolved to live His life till the rapture of the church, as a channel of prosperity to the church & an ailing world. His light continuous to shine as a city set on hill turning many to righteousness.', link: '/light' }
           ].map((item) => (
@@ -175,10 +176,10 @@ export default function Home() {
       <section className="py-24 max-w-7xl mx-auto px-8 relative">
         <div className="flex flex-col md:flex-row gap-12 mb-20">
           <div className="w-full md:w-1/3">
-            <Image priority src={bio1} alt="Travis Portrait" className="w-full h-auto object-cover rounded-sm shadow-lg grayscale hover:grayscale-0 transition-all duration-1000" />
+            <Image priority src={bio2} alt="Travis Portrait" className="w-full h-auto object-cover rounded-sm shadow-lg hover:grayscale-0 transition-all duration-1000" />
           </div>
           <div className="w-full md:w-2/3 mt-12 md:mt-24">
-            <Image priority src={bio2} alt="Group of friends" className="w-full h-[500px] object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition-all duration-1000" />
+            <Image priority src={bio1} alt="Group of friends" className="w-full h-[500px] md:h-[720px] md:object-full rounded-sm shadow-xl hover:grayscale-0 transition-all duration-1000" />
           </div>
         </div>
 
@@ -224,10 +225,10 @@ export default function Home() {
             {[
               {
                 icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" /></svg>,
-                title: "All White Thanksgiving",
+                title: "All-White Thanksgiving Service",
                 description: "An elegant celebration of gratitude, unity, and shared moments with friends, family, and loved ones. Dressed in white, we come together in reverence and joy, offering thanks to God.",
                 date: "19th April",
-                time: "10am",
+                time: "8am",
                 venue: "RSVP"
               },
               {
@@ -238,7 +239,10 @@ export default function Home() {
               {
                 icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" /></svg>,
                 title: "Roof Top Gala",
-                description: "An elegant sequence of events dedicated to celebrating a lifetime of achievements, surrounded by friends, family, and loved ones."
+                description: "An elegant sequence of events dedicated to celebrating a lifetime of achievements, surrounded by friends, family, and loved ones.",
+                date: "19th April",
+                time: "4pm",
+                venue: "RSVP"
               },
               {
                 icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" /></svg>,

@@ -51,16 +51,16 @@ export default function WorkPage() {
                 {/* Masonry-style Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
                     <div className="md:col-span-3 h-[300px] md:h-[450px] cursor-pointer" onClick={() => { setLightboxIndex(0); setIsLightboxOpen(true); }}>
-                        <Image priority src={images[0]} alt="Celebration" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[0]} alt="Celebration" className="w-full h-full object-cover rounded-2xl md:rounded-3xl md:grayscale md:hover:grayscale-0 transition-all duration-1000 select-none pointer-events-none" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(1); setIsLightboxOpen(true); }}>
-                        <Image priority src={images[1]} alt="Event" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[1]} alt="Event" className="w-full h-full object-cover rounded-2xl md:rounded-3xl md:grayscale md:hover:grayscale-0 transition-all duration-1000 select-none pointer-events-none" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(2); setIsLightboxOpen(true); }}>
-                        <Image priority src={images[2]} alt="Presents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[2]} alt="Presents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl md:grayscale md:hover:grayscale-0 transition-all duration-1000 select-none pointer-events-none" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(3); setIsLightboxOpen(true); }}>
-                        <Image priority src={images[3]} alt="Presents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image priority src={images[3]} alt="Presents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl md:grayscale md:hover:grayscale-0 transition-all duration-1000 select-none pointer-events-none" />
                     </div>
 
                 </div>

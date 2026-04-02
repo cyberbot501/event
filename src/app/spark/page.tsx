@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import childImage from '../assets/child.jpeg';
+import spack from "../assets/spack.jpeg"
 
 export default function SparkPage() {
     return (
@@ -25,7 +25,7 @@ export default function SparkPage() {
                 </div>
 
                 <div className="flex justify-center mt-12 w-full max-w-4xl mx-auto">
-                    <Image src={childImage} alt="The Spark" className="rounded-lg shadow-2xl object-cover w-full h-[400px] md:h-[600px]" priority />
+                    <Image src={spack} alt="The Spark" className="rounded-lg shadow-2xl object-cover w-full h-[400px] md:h-[600px]" priority />
                 </div>
             </div>
         </div>
