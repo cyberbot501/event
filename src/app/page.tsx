@@ -96,9 +96,12 @@ export default function Home() {
         {/* Hero Text */}
         <div className="relative z-10 text-center flex flex-col items-center px-4 mt-20 pointer-events-none">
           <p className="text-lg md:text-xl font-bold tracking-widest mb-6 text-[#C49B5A] uppercase drop-shadow-md">Honoring a radiant life</p>
-          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-serif tracking-tighter leading-none text-[#FDF5E6] drop-shadow-2xl">
-            Travis <span className="italic block mt-[-20px] md:mt-[-40px]">Uche</span>
+          <h1 className="text-[10rem] md:text-8xl lg:text-[15rem] font-serif tracking-tighter leading-none text-[#FDF5E6] drop-shadow-2xl">
+            Travis
           </h1>
+          <p className="text-4xl md:text-4xl lg:text-[3rem] font-serif tracking-tighter leading-none text-[#FDF5E6] drop-shadow-2xl">
+            Uche
+          </p>
         </div>
       </section>
 
