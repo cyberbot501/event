@@ -52,15 +52,15 @@ export default function GiftRegistryPage() {
                             <div className="space-y-4">
                                 <div>
                                     <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Account Name</p>
-                                    <p className="font-medium text-[#0A192F]">Travis Uche Family Trust</p>
+                                    <p className="font-medium text-[#0A192F]">David Uche</p>
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Account Number</p>
-                                    <p className="font-mono text-lg font-medium text-[#0A192F]">1234 5678 9012</p>
+                                    <p className="font-mono text-lg font-medium text-[#0A192F]">024 2410 867</p>
                                 </div>
                                 <div>
                                     <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Bank Name</p>
-                                    <p className="font-medium text-[#0A192F]">Global Heritage Bank</p>
+                                    <p className="font-medium text-[#0A192F]">WEMA Bank</p>
                                 </div>
                             </div>
                         </div>
@@ -78,17 +78,10 @@ export default function GiftRegistryPage() {
 
                             <div className="space-y-4">
                                 <div>
-                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Bitcoin (BTC)</p>
-                                    <p className="font-mono text-xs sm:text-sm text-[#FDF5E6] break-all">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</p>
+                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Espees Wallet Via KingsChat </p>
+                                    <p className="font-mono text-xs sm:text-sm text-[#FDF5E6] break-all">@travisuche</p>
                                 </div>
-                                <div>
-                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Ethereum (ETH / ERC20)</p>
-                                    <p className="font-mono text-xs sm:text-sm text-[#FDF5E6] break-all">0x71C7656EC7ab88b098defB751B7401B5f6d8976F</p>
-                                </div>
-                                <div>
-                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">USDT (TRC20)</p>
-                                    <p className="font-mono text-xs sm:text-sm text-[#FDF5E6] break-all">T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb</p>
-                                </div>
+
                             </div>
                         </div>
                     </div>
