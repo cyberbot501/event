@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { MessageSquare, ShoppingCart, Image as ImageIcon, Folder, ArrowRight, ArrowUp, ArrowUpRight } from "lucide-react";
+import { MessageSquare, ShoppingCart, Image as ImageIcon, Folder, ArrowRight, ArrowUp, ArrowUpRight, Calendar, Clock, MapPin } from "lucide-react";
 import Link from "next/link";
 import { MobileMenu } from "@/components/MobileMenu";
 import { HeroCarousel } from "@/components/HeroCarousel";
@@ -221,20 +221,62 @@ export default function Home() {
 
           <div className="flex flex-col gap-16 relative z-10 w-full max-w-2xl">
             {[
-              { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" /></svg>, title: "All White Thanksgiving" },
-              { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>, title: "Tributes & Testimonials" },
-              { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" /></svg>, title: "Roof Top Gala" },
-              { icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" /></svg>, title: "Dance & Celebration" }
+              {
+                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" /></svg>,
+                title: "All White Thanksgiving",
+                description: "An elegant celebration of gratitude, unity, and shared moments with friends, family, and loved ones. Dressed in white, we come together in reverence and joy, offering thanks to God.",
+                date: "19th April",
+                time: "10am",
+                venue: "RSVP"
+              },
+              {
+                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>,
+                title: "Tributes & Testimonials",
+                description: "A beautiful celebration with friends, family and loved ones"
+              },
+              {
+                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" /></svg>,
+                title: "Roof Top Gala",
+                description: "An elegant sequence of events dedicated to celebrating a lifetime of achievements, surrounded by friends, family, and loved ones."
+              },
+              {
+                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" /></svg>,
+                title: "Dance & Celebration",
+                description: "Creating memories beyond time and space."
+              }
             ].map((step, idx) => (
               <div key={idx} className="flex flex-col md:flex-row gap-8 items-start">
                 <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shrink-0 shadow-lg border border-[#1D4A77]/10 z-10 mx-auto md:mx-0 text-[#0A192F]">
                   {step.icon}
                 </div>
-                <div className="pt-2 text-center md:text-left">
+                <div className="pt-2 text-center md:text-left w-full">
                   <h3 className="text-3xl font-serif mb-4 text-[#0A192F]">{step.title}</h3>
                   <p className="text-base text-[#1D4A77]/70 leading-relaxed max-w-lg">
-                    An elegant sequence of events dedicated to celebrating a lifetime of achievements, surrounded by friends, family, and loved ones.
+                    {step.description}
                   </p>
+
+                  {(step.date || step.time || step.venue) && (
+                    <div className="flex flex-wrap gap-4 text-sm font-medium text-[#0A192F] bg-white/60 p-4 rounded-lg shadow-sm border border-[#1D4A77]/5 mt-4 justify-center md:justify-start">
+                      {step.date && (
+                        <div className="flex items-center gap-2">
+                          <Calendar className="w-4 h-4 text-[#C49B5A]" />
+                          <span>{step.date}</span>
+                        </div>
+                      )}
+                      {step.time && (
+                        <div className="flex items-center gap-2">
+                          <Clock className="w-4 h-4 text-[#C49B5A]" />
+                          <span>{step.time}</span>
+                        </div>
+                      )}
+                      {step.venue && (
+                        <div className="flex items-center gap-2">
+                          <MapPin className="w-4 h-4 text-[#C49B5A]" />
+                          <span>{step.venue}</span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
