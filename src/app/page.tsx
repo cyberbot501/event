@@ -180,7 +180,7 @@ export default function Home() {
             <Image priority src={bio2} alt="Travis Portrait" className="w-full h-auto object-cover rounded-sm shadow-lg hover:grayscale-0 transition-all duration-1000" />
           </div>
           <div className="w-full md:w-2/3 mt-12 md:mt-24">
-            <Image priority src={bio3} alt="Group of friends" className="w-full h-[500px] md:h-[880px] md:object-cover rounded-sm shadow-xl hover:grayscale-0 transition-all duration-1000" />
+            <Image priority src={bio3} alt="Group of friends" className="w-full h-auto md:object-cover rounded-sm shadow-xl hover:grayscale-0 transition-all duration-1000" />
           </div>
         </div>
 

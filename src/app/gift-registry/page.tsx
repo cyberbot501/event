@@ -42,6 +42,7 @@ export default function GiftRegistryPage() {
                             <div className="group">
                                 <div className="relative aspect-square mb-4 overflow-hidden rounded-xl bg-[#FAF0E6] flex items-center justify-center p-4">
                                     <Image
+                                        priority
                                         src={jbl}
                                         alt="JBL Charge 6 Bluetooth Speaker"
                                         className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-110"
@@ -55,6 +56,7 @@ export default function GiftRegistryPage() {
                             <div className="group">
                                 <div className="relative aspect-square mb-4 overflow-hidden rounded-xl bg-[#FAF0E6] flex items-center justify-center p-4">
                                     <Image
+                                        priority
                                         src={armaf}
                                         alt="Armaf Club De Nuit Precieux 1 Cologne"
                                         className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-110"
