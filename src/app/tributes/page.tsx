@@ -21,16 +21,16 @@ export default async function TributesPage() {
         .select('*')
         .order('created_at', { ascending: false });
 
-    const hardcodedTributes = [
-        { author: "Michael P.", city: "", text: "Travis has always been the compass that guided our family through storms and sunshine alike. His faith is unshakeable." },
-        { author: "Sarah L.", city: "", text: "A truly luminous man. His ability to make everyone in a room feel seen and valued is an extraordinary gift." },
-        { author: "Elijah C.", city: "", text: "From childhood lessons to profound life advice, Travis has shaped the man I am today. Thank you for everything." },
-        { author: "Grace & Family", city: "", text: "We love you beyond measure! Your heart for service has inspired us all to give freely and love deeply." },
-    ];
+    // const hardcodedTributes = [
+    //     { author: "Michael P.", city: "", text: "Travis has always been the compass that guided our family through storms and sunshine alike. His faith is unshakeable." },
+    //     { author: "Sarah L.", city: "", text: "A truly luminous man. His ability to make everyone in a room feel seen and valued is an extraordinary gift." },
+    //     { author: "Elijah C.", city: "", text: "From childhood lessons to profound life advice, Travis has shaped the man I am today. Thank you for everything." },
+    //     { author: "Grace & Family", city: "", text: "We love you beyond measure! Your heart for service has inspired us all to give freely and love deeply." },
+    // ];
 
     const combinedTributes = [
         ...(dbTributes || []).map((t: any) => ({ author: t.name, text: t.message, city: t.city })),
-        ...hardcodedTributes
+        // ...hardcodedTributes
     ];
 
     return (
