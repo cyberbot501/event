@@ -127,7 +127,7 @@ export default function Home() {
         <div className="flex flex-col gap-16 pt-10">
           {[
             { title: 'The Spark', desc: 'A lifelong commitment to uplifting those around him through selfless service and love. Every great journey starts with a single, undeniable spark of inspiration.', link: '/spark' },
-            { title: 'The Flame', desc: 'Guiding by example with wisdom, patience, and a vision that inspires generations. The flame represents the steady, unyielding passion.', link: '/flame' },
+            { title: 'The Flame', desc: 'Guiding by wisdom, patience, and a vision that inspires generations. The flame represents the steady, unyielding passion.', link: '/flame' },
             { title: 'The Light', desc: 'Resolved to live His life till the rapture of the church, as a channel of prosperity to the church & an ailing world. His light continuous to shine as a city set on hill turning many to righteousness.', link: '/light' }
           ].map((item) => (
             <Link href={item.link} key={item.title} className="group cursor-pointer block">
