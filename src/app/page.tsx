@@ -179,7 +179,7 @@ export default function Home() {
             <Image priority src={bio2} alt="Travis Portrait" className="w-full h-auto object-cover rounded-sm shadow-lg hover:grayscale-0 transition-all duration-1000" />
           </div>
           <div className="w-full md:w-2/3 mt-12 md:mt-24">
-            <Image priority src={bio1} alt="Group of friends" className="w-full h-[500px] md:h-[720px] md:object-full rounded-sm shadow-xl hover:grayscale-0 transition-all duration-1000" />
+            <Image priority src={bio1} alt="Group of friends" className="w-full h-[500px] md:h-[880px] md:object-cover rounded-sm shadow-xl hover:grayscale-0 transition-all duration-1000" />
           </div>
         </div>
 
@@ -234,12 +234,12 @@ export default function Home() {
               {
                 icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>,
                 title: "Tributes & Testimonials",
-                description: "A beautiful celebration with friends, family and loved ones"
+                description: "An elegant sequence of events dedicated to celebrating a lifetime of achievements, surrounded by friends, family, and loved ones."
               },
               {
                 icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" /></svg>,
                 title: "Roof Top Gala",
-                description: "An elegant sequence of events dedicated to celebrating a lifetime of achievements, surrounded by friends, family, and loved ones.",
+                description: "A beautiful celebration with friends, family and loved ones.",
                 date: "19th April",
                 time: "4pm",
                 venue: "RSVP"
