@@ -234,7 +234,7 @@ export default function Home() {
               {
                 icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>,
                 title: "Tributes & Testimonials",
-                description: "An elegant sequence of events dedicated to celebrating a lifetime of achievements, surrounded by friends, family, and loved ones."
+                description: "A heartfelt expression of honor, gratitude, and personal stories. A celebration of the impact and influence he has had on lives. Through tributes and testimonials, we share how paths crossed and journeys were shaped."
               },
               {
                 icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" /></svg>,
