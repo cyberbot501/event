@@ -9,7 +9,7 @@ export function Biography() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start relative mb-24">
             <div className="md:col-span-3">
                 <p className="text-sm font-bold tracking-widest uppercase mb-4 text-[#C49B5A]">Biography</p>
-                <h2 className="text-6xl md:text-7xl font-serif font-bold text-[#0A192F]">Travis Uche</h2>
+                {/* <h2 className="text-6xl md:text-7xl font-serif font-bold text-[#0A192F]">Travis Uche</h2> */}
             </div>
 
             <div className="md:col-span-4 md:col-start-5 text-[#1D4A77]/90 text-lg leading-relaxed font-medium flex flex-col items-start">

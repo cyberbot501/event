@@ -205,7 +205,7 @@ export default function Home() {
           <p className="text-xs font-bold tracking-widest uppercase mb-4 text-[#C49B5A]">Event Schedule</p>
           <h2 className="text-5xl md:text-6xl font-serif leading-tight mb-8 text-[#0A192F]">
             The Grand <br />
-            <span className="text-7xl md:text-8xl font-bold">Celebration</span>
+            <span className="text-5xl md:text-8xl font-bold">Celebration</span>
           </h2>
           <p className="text-lg text-[#1D4A77]/70 leading-relaxed max-w-sm">
             Join us as we walk through a carefully curated sequence of events designed to honor Travis and create unforgettable memories.
