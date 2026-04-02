@@ -1,16 +1,32 @@
+"use client";
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ImageLightbox } from '@/components/ImageLightbox';
 import church1 from "../assets/ministry/church.png"
 import church2 from "../assets/ministry/church2.png"
 import church3 from "../assets/ministry/church3.png"
 import church4 from "../assets/ministry/church6.png"
+import church5 from "../assets/ministry/min1.jpeg"
+import church7 from "../assets/ministry/min3.jpeg"
+import church8 from "../assets/ministry/min4.jpeg"
+import church9 from "../assets/ministry/min5.jpeg"
+
 
 export default function MinistryPage() {
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
     const images = [
         church1,
         church2,
         church3,
         church4,
+        church5,
+        church7,
+        church8,
+        church9,
     ];
 
     return (
@@ -47,17 +63,32 @@ export default function MinistryPage() {
 
                 {/* Masonry-style Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
-                    <div className="md:col-span-3 h-[300px] md:h-[450px]">
+                    <div className="md:col-span-3 h-[300px] md:h-[450px] cursor-pointer" onClick={() => { setLightboxIndex(0); setIsLightboxOpen(true); }}>
                         <Image priority src={images[0]} alt="Community service" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(1); setIsLightboxOpen(true); }}>
                         <Image priority src={images[1]} alt="Mentorship" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(2); setIsLightboxOpen(true); }}>
                         <Image priority src={images[2]} alt="Leadership" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(3); setIsLightboxOpen(true); }}>
                         <Image priority src={images[3]} alt="Helping hands" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
+                    </div>
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(4); setIsLightboxOpen(true); }}>
+                        <Image priority src={images[4]} alt="Helping hands" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
+                    </div>
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(5); setIsLightboxOpen(true); }}>
+                        <Image priority src={images[5]} alt="Helping hands" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
+                    </div>
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(6); setIsLightboxOpen(true); }}>
+                        <Image priority src={images[6]} alt="Helping hands" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
+                    </div>
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(7); setIsLightboxOpen(true); }}>
+                        <Image priority src={images[7]} alt="Helping hands" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
+                    </div>
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(8); setIsLightboxOpen(true); }}>
+                        <Image priority src={images[8]} alt="Helping hands" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
                     </div>
                 </div>
 
@@ -67,6 +98,13 @@ export default function MinistryPage() {
                     </p>
                 </div>
             </div>
+
+            <ImageLightbox
+                images={images}
+                initialIndex={lightboxIndex}
+                isOpen={isLightboxOpen}
+                onClose={() => setIsLightboxOpen(false)}
+            />
         </div>
     );
 }

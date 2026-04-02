@@ -22,56 +22,75 @@ export default function GiftRegistryPage() {
                     </p>
                 </div>
 
-                <div className="max-w-2xl mx-auto grid grid-cols-1 gap-8">
-                    {/* Bank Transfer Details */}
-                    <div className="bg-white border text-center border-[#C49B5A]/20 p-10 md:p-12 rounded-2xl shadow-xl hover:shadow-2xl hover:border-[#C49B5A]/60 transition-all duration-300 relative overflow-hidden group">
+                <div className="max-w-4xl mx-auto flex flex-col gap-8">
+                    {/* Big Wishlist Box */}
+                    <div className="bg-white border text-center border-[#C49B5A]/20 p-12 md:p-16 rounded-2xl shadow-xl hover:shadow-2xl hover:border-[#C49B5A]/60 transition-all duration-300 relative overflow-hidden group">
                         <div className="absolute top-0 left-0 w-full h-1 bg-[#C49B5A]"></div>
 
                         <div className="flex justify-center mb-6">
-                            <div className="w-12 h-12 rounded-full bg-[#1D4A77]/5 flex items-center justify-center">
-                                <CreditCard className="w-6 h-6 text-[#1D4A77]" />
+                            <div className="w-16 h-16 rounded-full bg-[#1D4A77]/5 flex items-center justify-center">
+                                <Gift className="w-8 h-8 text-[#C49B5A]" />
                             </div>
                         </div>
 
-                        <h2 className="text-2xl font-serif text-[#0A192F] mb-8">Bank Transfer</h2>
-
-                        <div className="space-y-6 text-left max-w-sm mx-auto">
-                            <div className="group/item">
-                                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-2 transition-colors group-hover/item:text-[#1D4A77]">Account Name</p>
-                                <p className="text-xl text-[#0A192F] font-medium border-b border-gray-100 pb-2">Travis Uche Family Trust</p>
-                            </div>
-
-                            <div className="group/item">
-                                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-2 transition-colors group-hover/item:text-[#1D4A77]">Account Number</p>
-                                <p className="text-xl font-mono text-[#0A192F] tracking-wider border-b border-gray-100 pb-2">1234 5678 9012</p>
-                            </div>
-
-                            <div className="group/item">
-                                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-2 transition-colors group-hover/item:text-[#1D4A77]">Bank Name</p>
-                                <p className="text-xl text-[#0A192F] font-medium border-b border-gray-100 pb-2">Global Heritage Bank</p>
-                            </div>
-
-                            {/* <div className="pt-4 group/item">
-                                <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-2 transition-colors group-hover/item:text-[#1D4A77]">Routing Number / Sort Code</p>
-                                <p className="text-lg text-[#1D4A77]/70 font-mono">098-765</p>
-                            </div> */}
-                        </div>
+                        <h2 className="text-4xl font-serif text-[#0A192F] mb-6">Wish List</h2>
+                        <h3 className="text-2xl font-bold uppercase tracking-widest text-[#C49B5A] mb-4">Coming Soon</h3>
+                        <p className="text-[#1D4A77]/70 text-lg">Curated gifts to celebrate this milestone will be available shortly.</p>
                     </div>
 
-                    {/* Zelle/CashApp Alternative */}
-                    <div className="bg-white border text-center border-[#C49B5A]/10 p-8 rounded-2xl shadow-md transition-all duration-300">
-                        <h3 className="text-lg font-bold uppercase tracking-widest text-[#0A192F] mb-4">gift wishlist</h3>
-                        <p className="text-[#1D4A77]/70 mb-4 text-sm md:text-base">coming soon</p>
-                        {/* <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-                            <div className="text-left w-full sm:w-auto p-4 bg-[#FDF5E6]/50 rounded-lg border border-[#C49B5A]/10 hover:border-[#C49B5A]/30 transition-colors">
-                                <p className="text-[10px] font-bold tracking-widest uppercase text-[#C49B5A] mb-1">CashApp</p>
-                                <p className="text-lg font-mono font-medium text-[#0A192F]">$TravisFamily</p>
+                    {/* Small Boxes: Bank & Crypto */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {/* Bank Transfer Details */}
+                        <div className="bg-[#FAF0E6] border border-[#C49B5A]/20 p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm">
+                                    <CreditCard className="w-5 h-5 text-[#1D4A77]" />
+                                </div>
+                                <h3 className="text-xl font-serif text-[#0A192F]">Bank Transfer</h3>
                             </div>
-                            <div className="text-left w-full sm:w-auto p-4 bg-[#FDF5E6]/50 rounded-lg border border-[#C49B5A]/10 hover:border-[#C49B5A]/30 transition-colors">
-                                <p className="text-[10px] font-bold tracking-widest uppercase text-[#C49B5A] mb-1">Zelle</p>
-                                <p className="text-lg font-mono font-medium text-[#0A192F]">gifts@travisuche.com</p>
+
+                            <div className="space-y-4">
+                                <div>
+                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Account Name</p>
+                                    <p className="font-medium text-[#0A192F]">Travis Uche Family Trust</p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Account Number</p>
+                                    <p className="font-mono text-lg font-medium text-[#0A192F]">1234 5678 9012</p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Bank Name</p>
+                                    <p className="font-medium text-[#0A192F]">Global Heritage Bank</p>
+                                </div>
                             </div>
-                        </div> */}
+                        </div>
+
+                        {/* Crypto Details */}
+                        <div className="bg-[#1D4A77] text-white border border-[#1D4A77]/20 p-8 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300">
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shadow-sm">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-5 h-5 text-[#C49B5A]">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-xl font-serif text-white">Digital Assets</h3>
+                            </div>
+
+                            <div className="space-y-4">
+                                <div>
+                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Bitcoin (BTC)</p>
+                                    <p className="font-mono text-xs sm:text-sm text-[#FDF5E6] break-all">bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh</p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">Ethereum (ETH / ERC20)</p>
+                                    <p className="font-mono text-xs sm:text-sm text-[#FDF5E6] break-all">0x71C7656EC7ab88b098defB751B7401B5f6d8976F</p>
+                                </div>
+                                <div>
+                                    <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#C49B5A] mb-1">USDT (TRC20)</p>
+                                    <p className="font-mono text-xs sm:text-sm text-[#FDF5E6] break-all">T9yD14Nj9j7xAB4dbGeiX9h8unkKHxuWwb</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

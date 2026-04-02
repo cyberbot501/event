@@ -16,6 +16,7 @@ export default function FlamePage() {
 
                     <div className="mt-16 text-[#1D4A77] text-lg md:text-xl leading-relaxed font-light space-y-8">
                         <p>Guiding by example with wisdom, patience, and a vision that inspires generations. The flame represents the steady, unyielding passion that sustains our efforts even when the winds of challenge blow fiercely against us.</p>
+                        <p>Travis’s flame grew from his days in the campus ministry of Loveworld a.k.a Christ Embassy. From the streets of the university of Lagos. He heard the cry of the world around him & he answered the call. This led to a track record of exploits & impact through faith, outreaches & kingdom finance.   </p>
                     </div>
                 </div>
             </div>

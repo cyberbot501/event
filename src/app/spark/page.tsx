@@ -16,6 +16,9 @@ export default function SparkPage() {
 
                     <div className="mt-16 text-[#1D4A77] text-lg md:text-xl leading-relaxed font-light space-y-8">
                         <p>A lifelong commitment to uplifting those around him through selfless service and love. Every great journey starts with a single, undeniable spark of inspiration—a moment that redefines purpose and aligns us with a greater calling.</p>
+                        <p>Travis’s spark was lit up by His faith in Jesus Christ. Growing up in the children’s church, serving in the house of God created a spark & a flare for the kingdom that guides every area of his life till date.
+
+                            This evolved into his curiosity first creativity & entrepreneurship. And has long been a guiding compass through the years.</p>
                     </div>
                 </div>
             </div>

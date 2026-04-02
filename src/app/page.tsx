@@ -4,15 +4,20 @@ import Link from "next/link";
 import { MobileMenu } from "@/components/MobileMenu";
 import { HeroCarousel } from "@/components/HeroCarousel";
 import { Biography } from "@/components/Biography";
+import { TributeForm } from "@/components/TributeForm";
 import Image from "next/image";
 import logo from "./assets/LUMINOUS-LAMBENT-GOLD.png"
-import slide1 from "./assets/silde6.png"
-import slide2 from "./assets/slide2.png"
-import slide3 from "./assets/slide3.png"
-import slide4 from "./assets/slide5.png"
-import slide5 from "./assets/side1.png"
-import bio1 from "./assets/bio1.png"
-import bio2 from "./assets/bio2.png"
+import slide1 from "./assets/slide1.jpeg"
+import slide2 from "./assets/slide2.jpeg"
+import slide3 from "./assets/slide3.jpeg"
+import slide4 from "./assets/slide4.jpeg"
+import bio1 from "./assets/bio1.jpeg"
+import bio2 from "./assets/bio.jpeg"
+import jou from "./assets/jou.jpeg"
+import work from "./assets/work.jpeg"
+import family from "./assets/family.jpeg"
+import min from "./assets/min.jpeg"
+import child from "./assets/child.jpeg"
 
 
 
@@ -43,11 +48,11 @@ export default function Home() {
   ];
 
   const galleryItems = [
-    { category: "MEMORIES", title: "Childhood", image: "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=600&q=80", link: "/childhood" },
-    { category: "BONDING", title: "Family", image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80", link: "/family" },
-    { category: "SERVICE", title: "Ministry", image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=600&q=80", link: "/ministry" },
-    { category: "IMPACT", title: "Legacy", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80", link: "/legacy" },
-    { category: "ENTERPRISE", title: "Work, Leadership", image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=600&q=80", link: "/work" },
+    { category: "MEMORIES", title: "Childhood", image: child, link: "/childhood" },
+    { category: "BONDING", title: "Family", image: family, link: "/family" },
+    { category: "SERVICE", title: "Ministry", image: min, link: "/ministry" },
+    { category: "IMPACT", title: "Legacy", image: jou, link: "/legacy" },
+    { category: "ENTERPRISE", title: "Work, Leadership", image: work, link: "/work" },
   ];
 
   return (
@@ -110,7 +115,7 @@ export default function Home() {
           </h2>
           <div className="relative mt-20">
             <div className="absolute -left-20 -bottom-20 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50"></div>
-            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&q=80" alt="Milestones" className="relative z-10 w-48 h-48 object-cover rounded-full ml-10 border-4 border-white shadow-xl" />
+            <Image priority src={jou} alt="Milestones" className="relative z-10 w-48 h-48 object-cover rounded-full ml-10 border-4 border-white shadow-xl" />
           </div>
         </div>
 
@@ -145,7 +150,7 @@ export default function Home() {
           {galleryItems.map((item, index) => (
             <Link href={item.link} key={index} className="group flex flex-col md:flex-1 md:hover:flex-[3] transition-all duration-700 ease-in-out cursor-pointer md:h-full bg-white shadow-md rounded-md overflow-hidden">
               <div className="w-full h-[250px] md:h-full md:group-hover:h-[70%] transition-all duration-700 ease-in-out overflow-hidden relative shrink-0">
-                <img src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105" />
+                <Image priority src={item.image} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 md:group-hover:scale-105" />
                 <div className="absolute inset-0 bg-black/10 md:group-hover:bg-transparent transition-colors duration-500"></div>
               </div>
               <div className="w-full h-auto opacity-100 md:h-0 md:group-hover:h-[30%] md:opacity-0 md:group-hover:opacity-100 transition-all duration-700 ease-in-out bg-white overflow-hidden flex flex-col justify-center">
@@ -169,7 +174,7 @@ export default function Home() {
             <Image priority src={bio1} alt="Travis Portrait" className="w-full h-auto object-cover rounded-sm shadow-lg grayscale hover:grayscale-0 transition-all duration-1000" />
           </div>
           <div className="w-full md:w-2/3 mt-12 md:mt-24">
-            <Image priority src={slide5} alt="Group of friends" className="w-full h-[500px] object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition-all duration-1000" />
+            <Image priority src={bio2} alt="Group of friends" className="w-full h-[500px] object-cover rounded-sm shadow-xl grayscale hover:grayscale-0 transition-all duration-1000" />
           </div>
         </div>
 
@@ -178,7 +183,7 @@ export default function Home() {
 
       {/* Banner CTA Section */}
       <section className="w-full relative h-[600px] flex items-center justify-center overflow-hidden">
-        <Image priority src={slide5} alt="Celebration party" className="absolute inset-0 w-full h-full object-cover" />
+        <Image priority src={slide1} alt="Celebration party" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#0A192F]/70"></div>
         <div className="relative z-10 text-center flex flex-col items-center">
           <p className="text-[#C49B5A] text-sm font-bold tracking-widest uppercase mb-6">Join the Celebration</p>
@@ -234,10 +239,22 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tribute Form Section */}
+      <TributeForm />
+
       {/* Footer minimal */}
       <footer className="bg-[#0A192F] text-[#FDF5E6] py-16 text-center border-t-4 border-[#C49B5A]">
         <div className="flex flex-col items-center justify-center mt-2 group cursor-pointer mb-8">
-          <Image src={logo} alt="Logo" className="w-[250px] h-[250px]" priority />
+
+          <span className="text-[10px] tracking-[0.3em] uppercase text-[#C49B5A] font-semibold mb-[-8px] transition-all group-hover:tracking-[0.4em] z-10 px-2 rounded-full drop-shadow-md">Celebrating The</span>
+          <div className="text-4xl md:text-5xl font-bold tracking-tighter text-[#FDF5E6] leading-none text-center drop-shadow-md" style={{ fontFamily: "Georgia, serif" }}>
+            Luminous <br />
+            <span className="ml-12 italic text-[#C49B5A]">Lambent</span>
+          </div>
+          {/* <div className="text-[10px] tracking-widest font-black self-end mt-[-10px] mr-2 text-[#0A192F] bg-[#FDF5E6] px-1 rounded-sm shadow-sm">
+            TRAVIS<br />UCHE
+          </div> */}
+
         </div>
         <p className="text-[#FDF5E6]/60 mb-8">© Courtesy: Team Xanotech</p>
       </footer>

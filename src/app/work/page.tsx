@@ -1,15 +1,24 @@
+"use client";
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ImageLightbox } from '@/components/ImageLightbox';
 import church1 from "../assets/legacy/IMG_9267.jpg"
-import church2 from "../assets/legacy/IMG_9267.jpg"
-import church3 from "../assets/legacy/IMG_5490_jpg.jpg"
+import church2 from "../assets/legacy/work6.jpeg"
+import church3 from "../assets/legacy/work7.jpeg"
+import church4 from "../assets/legacy/work8.jpeg"
 
 
 export default function WorkPage() {
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
     const images = [
         church1,
         church2,
         church3,
+        church4
 
     ];
 
@@ -41,14 +50,17 @@ export default function WorkPage() {
 
                 {/* Masonry-style Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
-                    <div className="md:col-span-3 h-[300px] md:h-[450px]">
+                    <div className="md:col-span-3 h-[300px] md:h-[450px] cursor-pointer" onClick={() => { setLightboxIndex(0); setIsLightboxOpen(true); }}>
                         <Image priority src={images[0]} alt="Celebration" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(1); setIsLightboxOpen(true); }}>
                         <Image priority src={images[1]} alt="Event" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(2); setIsLightboxOpen(true); }}>
                         <Image priority src={images[2]} alt="Presents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                    </div>
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(3); setIsLightboxOpen(true); }}>
+                        <Image priority src={images[3]} alt="Presents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
 
                 </div>
@@ -59,6 +71,13 @@ export default function WorkPage() {
                     </p>
                 </div>
             </div>
+
+            <ImageLightbox
+                images={images}
+                initialIndex={lightboxIndex}
+                isOpen={isLightboxOpen}
+                onClose={() => setIsLightboxOpen(false)}
+            />
         </div>
     );
 }

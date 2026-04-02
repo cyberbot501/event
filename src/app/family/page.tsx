@@ -1,16 +1,23 @@
+"use client";
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import church1 from "../assets/ministry/church5.png"
-import church2 from "../assets/ministry/church2.png"
-import church3 from "../assets/ministry/church.png"
-import church4 from "../assets/ministry/church6.png"
+import { ImageLightbox } from '@/components/ImageLightbox';
+import church1 from "../assets/family6.jpeg"
+import church2 from "../assets/family.jpeg"
+import church3 from "../assets/ministry/church5.png"
+
 
 export default function FamilyPage() {
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
     const images = [
         church1,
         church2,
         church3,
-        church4,
+
     ];
 
     return (
@@ -40,18 +47,16 @@ export default function FamilyPage() {
 
                 {/* Masonry-style Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
-                    <div className="md:col-span-3 h-[300px] md:h-[450px]">
+                    <div className="md:col-span-3 h-[300px] md:h-[450px] cursor-pointer" onClick={() => { setLightboxIndex(0); setIsLightboxOpen(true); }}>
                         <Image priority src={images[0]} alt="Family gathering" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(1); setIsLightboxOpen(true); }}>
                         <Image priority src={images[1]} alt="Family laughing" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(2); setIsLightboxOpen(true); }}>
                         <Image priority src={images[2]} alt="Parents" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <Image priority src={images[3]} alt="Portrait" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
-                    </div>
+
                 </div>
 
                 <div className="text-center pb-12 md:pb-20">
@@ -60,6 +65,13 @@ export default function FamilyPage() {
                     </p>
                 </div>
             </div>
+
+            <ImageLightbox
+                images={images}
+                initialIndex={lightboxIndex}
+                isOpen={isLightboxOpen}
+                onClose={() => setIsLightboxOpen(false)}
+            />
         </div>
     );
 }

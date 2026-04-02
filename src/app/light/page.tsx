@@ -15,7 +15,13 @@ export default function LightPage() {
                     <div className="w-16 h-[2px] bg-[#C49B5A] mb-8"></div>
 
                     <div className="mt-16 text-[#1D4A77] text-lg md:text-xl leading-relaxed font-light space-y-8">
-                        <p>Always putting family and community first, creating a welcoming space for everyone. The light is the ultimate destination—the manifestation of love, joy, and peace radiating outward to touch the lives of all those we encounter.</p>
+                        <p>
+
+                            Resolved to live His life till the rapture of the church, as a channel of prosperity to the church & an ailing world. His light continuous to shine as a city set on hill turning many to righteousness.
+
+                            Travis remains resolved & driven by his vision & divine purpose. He is a Leader, Pastor, Father, Brother, Friend, Uncle to many.
+
+                            We celebrate the Luminous Lambent ~ Radiantly Glowing & we rejoice for His Light.</p>
                     </div>
                 </div>
             </div>

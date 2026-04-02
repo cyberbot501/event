@@ -1,11 +1,36 @@
 import Link from 'next/link';
+import { supabase } from '@/lib/supabase';
+import image1 from "../assets/slide4.jpeg";
+import image2 from "@/app/assets/slide3.jpeg";
+import image3 from "@/app/assets/slide2.jpeg";
+import image4 from "@/app/assets/slide1.jpeg";
+import Image from 'next/image';
 
-export default function TributesPage() {
+export const dynamic = 'force-dynamic';
+
+export default async function TributesPage() {
     const images = [
-        "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=1200&q=80",
-        "https://images.unsplash.com/photo-1544621006-259837a77e8f?w=600&q=80",
-        "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?w=600&q=80",
-        "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=800&fit=crop&q=80",
+        image1,
+        image2,
+        image3,
+        image4,
+    ];
+
+    const { data: dbTributes } = await supabase
+        .from('tributes')
+        .select('*')
+        .order('created_at', { ascending: false });
+
+    const hardcodedTributes = [
+        { author: "Michael P.", city: "", text: "Travis has always been the compass that guided our family through storms and sunshine alike. His faith is unshakeable." },
+        { author: "Sarah L.", city: "", text: "A truly luminous man. His ability to make everyone in a room feel seen and valued is an extraordinary gift." },
+        { author: "Elijah C.", city: "", text: "From childhood lessons to profound life advice, Travis has shaped the man I am today. Thank you for everything." },
+        { author: "Grace & Family", city: "", text: "We love you beyond measure! Your heart for service has inspired us all to give freely and love deeply." },
+    ];
+
+    const combinedTributes = [
+        ...(dbTributes || []).map((t: any) => ({ author: t.name, text: t.message, city: t.city })),
+        ...hardcodedTributes
     ];
 
     return (
@@ -36,15 +61,12 @@ export default function TributesPage() {
 
                 {/* Testimonial Block */}
                 <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 md:mb-32">
-                    {[
-                        { author: "Michael P.", text: "Travis has always been the compass that guided our family through storms and sunshine alike. His faith is unshakeable." },
-                        { author: "Sarah L.", text: "A truly luminous man. His ability to make everyone in a room feel seen and valued is an extraordinary gift." },
-                        { author: "Elijah C.", text: "From childhood lessons to profound life advice, Travis has shaped the man I am today. Thank you for everything." },
-                        { author: "Grace & Family", text: "We love you beyond measure! Your heart for service has inspired us all to give freely and love deeply." },
-                    ].map((tribute, idx) => (
+                    {combinedTributes.map((tribute, idx) => (
                         <div key={idx} className="bg-[#1A1A1A] border border-[#C49B5A]/20 p-8 rounded-2xl shadow-xl hover:border-[#C49B5A]/60 transition-colors">
                             <p className="text-[#E0E0E0] italic mb-6 leading-relaxed">"{tribute.text}"</p>
-                            <p className="text-[#C49B5A] font-bold tracking-widest text-xs uppercase">— {tribute.author}</p>
+                            <p className="text-[#C49B5A] font-bold tracking-widest text-xs uppercase">
+                                — {tribute.author} {tribute.city && <span className="opacity-70 text-[10px] ml-1">| {tribute.city}</span>}
+                            </p>
                         </div>
                     ))}
                 </div>
@@ -52,16 +74,16 @@ export default function TributesPage() {
                 {/* Masonry-style Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
                     <div className="md:col-span-3 h-[300px] md:h-[450px]">
-                        <img src={images[0]} alt="Family sharing a moment" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image src={images[0]} alt="Family sharing a moment" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[1]} alt="Friendship" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image src={images[1]} alt="Friendship" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[2]} alt="Laughs" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
+                        <Image src={images[2]} alt="Laughs" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
                     <div className="md:col-span-1 h-[300px] md:h-[400px]">
-                        <img src={images[3]} alt="Portrait" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
+                        <Image src={images[3]} alt="Portrait" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000 object-top" />
                     </div>
                 </div>
 

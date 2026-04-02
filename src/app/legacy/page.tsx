@@ -1,10 +1,17 @@
+"use client";
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { ImageLightbox } from '@/components/ImageLightbox';
 import church1 from "../assets/legacy/1D624C6C-4C54-4F8C-8C13-92702FBCC13E.jpg"
 import church2 from "../assets/legacy/9B0A5708-5B80-4024-B896-0BE0BF4A7AED.jpg"
 import church3 from "../assets/legacy/IMG_5490_jpg.jpg"
 
 export default function LegacyPage() {
+    const [lightboxIndex, setLightboxIndex] = useState(0);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+
     const images = [
         church1,
         church2,
@@ -38,13 +45,13 @@ export default function LegacyPage() {
 
                 {/* Masonry-style Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-24 md:mb-32">
-                    <div className="md:col-span-3 h-[300px] md:h-[450px]">
+                    <div className="md:col-span-3 h-[300px] md:h-[450px] cursor-pointer" onClick={() => { setLightboxIndex(0); setIsLightboxOpen(true); }}>
                         <Image priority src={images[0]} alt="Business legacy" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(1); setIsLightboxOpen(true); }}>
                         <Image priority src={images[1]} alt="Success" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
-                    <div className="md:col-span-1 h-[300px] md:h-[400px]">
+                    <div className="md:col-span-1 h-[300px] md:h-[400px] cursor-pointer" onClick={() => { setLightboxIndex(2); setIsLightboxOpen(true); }}>
                         <Image priority src={images[2]} alt="Teamwork" className="w-full h-full object-cover rounded-2xl md:rounded-3xl grayscale hover:grayscale-0 transition-all duration-1000" />
                     </div>
 
@@ -56,6 +63,13 @@ export default function LegacyPage() {
                     </p>
                 </div>
             </div>
+
+            <ImageLightbox
+                images={images}
+                initialIndex={lightboxIndex}
+                isOpen={isLightboxOpen}
+                onClose={() => setIsLightboxOpen(false)}
+            />
         </div>
     );
 }
