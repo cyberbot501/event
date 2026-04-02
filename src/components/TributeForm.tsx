@@ -40,7 +40,11 @@ export function TributeForm() {
                         <div className="text-center mb-10">
                             <p className="text-xs font-bold tracking-widest uppercase mb-4 text-[#C49B5A]">Share a Memory</p>
                             <h2 className="text-4xl md:text-5xl font-serif text-[#0A192F] mb-4">Write a Tribute</h2>
-                            <p className="text-[#1D4A77]/70">We invite you to share your heartfelt thoughts, memories, and tributes celebrating the life and legacy of Travis Uche.</p>
+                            <p className="text-[#1D4A77]/70">We invite you to share your Lambent testimony of Travis.
+
+                                Kindly focus on key areas such as the impact he has made in your life, how he has influenced your growth, and the value of his contributions to your journey. Your testimony should reflect personal experiences, insights, and the significance of his role in shaping your perspective or outcomes.
+
+                                We look forward to receiving your thoughtful and inspiring submissions.</p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="space-y-6">

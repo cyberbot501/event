@@ -124,9 +124,9 @@ export default function Home() {
 
         <div className="flex flex-col gap-16 pt-10">
           {[
-            { title: 'The Spark', desc: 'A lifelong commitment to uplifting those around him through selfless service and love.', link: '/spark' },
-            { title: 'The Flame', desc: 'Guiding by example with wisdom, patience, and a vision that inspires generations.', link: '/flame' },
-            { title: 'The Light', desc: 'Always putting family and community first, creating a welcoming space for everyone.', link: '/light' }
+            { title: 'The Spark', desc: 'A lifelong commitment to uplifting those around him through selfless service and love. Every great journey starts with a single,......', link: '/spark' },
+            { title: 'The Flame', desc: 'Guiding by example with wisdom, patience, and a vision that inspires generations. The flame represents the steady, unyielding passion.', link: '/flame' },
+            { title: 'The Light', desc: 'Resolved to live His life till the rapture of the church, as a channel of prosperity to the church & an ailing world. His light continuous to shine as a city set on hill turning many to righteousness.', link: '/light' }
           ].map((item) => (
             <Link href={item.link} key={item.title} className="group cursor-pointer block">
               <h3 className="text-4xl font-serif mb-4 flex items-center justify-between group-hover:text-[#1D4A77] transition-colors">
