@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { supabase } from '@/lib/supabase';
+import { TributeCard } from '@/components/TributeCard';
 import image1 from "../assets/slide4.jpeg";
 import image2 from "@/app/assets/slide3.jpeg";
 import image3 from "@/app/assets/slide2.jpeg";
@@ -59,15 +60,14 @@ export default async function TributesPage() {
                     </div>
                 </div>
 
-                {/* Testimonial Block */}
-                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 md:mb-32">
+                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 md:mb-32 items-stretch">
                     {combinedTributes.map((tribute, idx) => (
-                        <div key={idx} className="bg-[#1A1A1A] border border-[#C49B5A]/20 p-8 rounded-2xl shadow-xl hover:border-[#C49B5A]/60 transition-colors">
-                            <p className="text-[#E0E0E0] italic mb-6 leading-relaxed">"{tribute.text}"</p>
-                            <p className="text-[#C49B5A] font-bold tracking-widest text-xs uppercase">
-                                — {tribute.author} {tribute.city && <span className="opacity-70 text-[10px] ml-1">| {tribute.city}</span>}
-                            </p>
-                        </div>
+                        <TributeCard
+                            key={idx}
+                            author={tribute.author}
+                            text={tribute.text}
+                            city={tribute.city}
+                        />
                     ))}
                 </div>
 

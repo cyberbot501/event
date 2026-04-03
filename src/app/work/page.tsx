@@ -31,7 +31,7 @@ export default function WorkPage() {
 
                 <div className="flex flex-col items-center text-center mb-20 md:mb-32 max-w-3xl mx-auto">
                     <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#C49B5A] mb-8" style={{ fontFamily: "Georgia, serif" }}>
-                        A Night to Remember
+                        Work and Leadership
                     </h1>
                     <div className="w-16 h-[2px] bg-[#C49B5A] mb-8"></div>
                     <h2 className="text-xs md:text-sm font-bold tracking-[0.3em] uppercase text-[#C49B5A]">
