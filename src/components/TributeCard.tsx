@@ -13,11 +13,11 @@ export function TributeCard({ author, text, city }: TributeCardProps) {
 
     // Split by whitespace and filter out empty strings to get accurate word count
     const words = text.trim().split(/\s+/);
-    const isLong = words.length > 300;
+    const isLong = words.length > 150;
 
     const displayText = isExpanded || !isLong
         ? text
-        : words.slice(0, 300).join(" ") + "...";
+        : words.slice(0, 100).join(" ") + "...";
 
     return (
         <div className="bg-[#1A1A1A] border border-[#C49B5A]/20 p-8 rounded-2xl shadow-xl hover:border-[#C49B5A]/60 transition-colors flex flex-col h-full">

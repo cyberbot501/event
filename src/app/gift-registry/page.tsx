@@ -3,6 +3,11 @@ import { Gift, CreditCard, ArrowLeft, Watch, Smartphone, ShoppingBag, Shirt } fr
 import Image from 'next/image';
 import jbl from '../assets/jbl.jpeg';
 import armaf from '../assets/pef.jpeg';
+import drums from '../assets/drums.jpeg';
+import light from '../assets/light.jpeg';
+import keyboard from '../assets/keyboard.jpeg';
+import speakers from '../assets/speakers.jpeg';
+
 
 export default function GiftRegistryPage() {
     return (
@@ -57,13 +62,56 @@ export default function GiftRegistryPage() {
                                 <div className="relative aspect-square mb-4 overflow-hidden rounded-xl bg-[#FAF0E6] flex items-center justify-center p-4">
                                     <Image
                                         priority
-                                        src={armaf}
+                                        src={drums}
                                         alt="Armaf Club De Nuit Precieux 1 Cologne"
                                         className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-110"
                                     />
                                 </div>
-                                <h4 className="text-sm font-bold tracking-widest uppercase text-[#C49B5A] mb-1">Fragrance</h4>
-                                <p className="text-lg font-serif text-[#0A192F]">Armaf Club De Nuit Precieux 1 Cologne for Men</p>
+                                <h4 className="text-sm font-bold tracking-widest uppercase text-[#C49B5A] mb-1">Instrument</h4>
+                                <p className="text-lg font-serif text-[#0A192F]">Set of Drums</p>
+                            </div>
+
+                            {/* Armaf Cologne */}
+                            <div className="group">
+                                <div className="relative aspect-square mb-4 overflow-hidden rounded-xl bg-[#FAF0E6] flex items-center justify-center p-4">
+                                    <Image
+                                        priority
+                                        src={light}
+                                        alt="Armaf Club De Nuit Precieux 1 Cologne"
+                                        className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
+                                <h4 className="text-sm font-bold tracking-widest uppercase text-[#C49B5A] mb-1">Electronics</h4>
+                                <p className="text-lg font-serif text-[#0A192F]">Stage Light</p>
+                            </div>
+
+
+                            {/* Armaf Cologne */}
+                            <div className="group">
+                                <div className="relative aspect-square mb-4 overflow-hidden rounded-xl bg-[#FAF0E6] flex items-center justify-center p-4">
+                                    <Image
+                                        priority
+                                        src={keyboard}
+                                        alt="Armaf Club De Nuit Precieux 1 Cologne"
+                                        className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
+                                <h4 className="text-sm font-bold tracking-widest uppercase text-[#C49B5A] mb-1">Instrument</h4>
+                                <p className="text-lg font-serif text-[#0A192F]">Church Keyboard</p>
+                            </div>
+
+                            {/* Armaf Cologne */}
+                            <div className="group">
+                                <div className="relative aspect-square mb-4 overflow-hidden rounded-xl bg-[#FAF0E6] flex items-center justify-center p-4">
+                                    <Image
+                                        priority
+                                        src={speakers}
+                                        alt="Armaf Club De Nuit Precieux 1 Cologne"
+                                        className="object-contain w-full h-full transition-transform duration-500 group-hover:scale-110"
+                                    />
+                                </div>
+                                <h4 className="text-sm font-bold tracking-widest uppercase text-[#C49B5A] mb-1">Electronics</h4>
+                                <p className="text-lg font-serif text-[#0A192F]">Sound System</p>
                             </div>
                         </div>
 
