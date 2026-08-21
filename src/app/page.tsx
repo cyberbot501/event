@@ -32,7 +32,7 @@ export default function Home() {
     { name: "Gallery", href: "/#gallery" },
    
     { name: "Tributes", href: "/tributes" },
-    { name: "Gift Registry", href: "/gift-registry" },
+    // { name: "Gift Registry", href: "/gift-registry" },
 
 
   ];
