@@ -30,10 +30,10 @@ export default function Home() {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Gallery", href: "/#gallery" },
-    { name: "Schedule", href: "/#schedule" },
+   
     { name: "Tributes", href: "/tributes" },
     { name: "Gift Registry", href: "/gift-registry" },
-    { name: "RSVP", href: "/rsvp" }
+
 
   ];
 
@@ -192,103 +192,17 @@ export default function Home() {
         <Image priority src={slide1} alt="Celebration party" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#0A192F]/70"></div>
         <div className="relative z-10 text-center flex flex-col items-center">
-          <p className="text-[#C49B5A] text-sm font-bold tracking-widest uppercase mb-6">Join the Celebration</p>
+        
           <h2 className="text-5xl md:text-7xl font-serif text-white max-w-4xl leading-tight mb-12">
             Celebrating a Lambent<span className="italic font-bold text-7xl md:text-8xl"> Legacy </span><br />
 
           </h2>
-          <Link href="https://forms.gle/wQxJ9RKHwYRRfnms9">
-            <Button className="bg-[#C49B5A] hover:bg-[#b08b51] text-white rounded-full px-10 py-6 text-lg font-bold border-none cursor-pointer">
-              RSVP Now
-            </Button>
-          </Link>
+          
         </div>
       </section>
 
       {/* Planning Steps Vertical Timeline Section */}
-      <section id="schedule" className="py-32 px-4 md:px-8 max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-36 relative bg-[#FAF0E6]/50">
-        <div className="md:col-span-4 pl-4 md:pl-8">
-          <p className="text-xs font-bold tracking-widest uppercase mb-4 text-[#C49B5A]">Event Schedule</p>
-          <h2 className="text-5xl md:text-6xl font-serif leading-tight mb-8 text-[#0A192F]">
-            The Grand <br />
-            <span className="text-5xl md:text-8xl font-bold">Celebration</span>
-          </h2>
-          <p className="text-lg text-[#1D4A77]/70 leading-relaxed max-w-sm">
-            Join us as we walk through a carefully curated sequence of events designed to honor Travis and create unforgettable memories.
-          </p>
-        </div>
-
-        <div className="md:col-span-8 relative">
-          {/* Vertical timeline line */}
-          <div className="absolute left-[39px] top-4 bottom-4 w-[2px] bg-[#1D4A77]/10 z-0 hidden md:block"></div>
-
-          <div className="flex flex-col gap-16 relative z-10 w-full max-w-2xl">
-            {[
-              {
-                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 3h-1V1h-2v2H7V1H5v2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H4V8h16v13z" /></svg>,
-                title: "All-White Thanksgiving Service",
-                description: "An elegant celebration of gratitude, unity, and shared moments with friends, family, and loved ones. Dressed in white, we come together in reverence and joy, offering thanks to God.",
-                date: "19th April",
-                time: "8am",
-                venue: "RSVP"
-              },
-              {
-                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" /></svg>,
-                title: "Tributes & Testimonials",
-                description: "A heartfelt expression of honor, gratitude, and personal stories. A celebration of the impact and influence he has had on lives. Through tributes and testimonials, we share how paths crossed and journeys were shaped."
-              },
-              {
-                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z" /></svg>,
-                title: "Roof Top Gala",
-                description: "A beautiful celebration with friends, family and loved ones.",
-                date: "19th April",
-                time: "4pm",
-                venue: "RSVP"
-              },
-              {
-                icon: <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" /></svg>,
-                title: "Dance & Celebration",
-                description: "Creating memories beyond time and space."
-              }
-            ].map((step, idx) => (
-              <div key={idx} className="flex flex-col md:flex-row gap-8 items-start">
-                <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shrink-0 shadow-lg border border-[#1D4A77]/10 z-10 mx-auto md:mx-0 text-[#0A192F]">
-                  {step.icon}
-                </div>
-                <div className="pt-2 text-center md:text-left w-full">
-                  <h3 className="text-3xl font-serif mb-4 text-[#0A192F]">{step.title}</h3>
-                  <p className="text-base text-[#1D4A77]/70 leading-relaxed max-w-lg">
-                    {step.description}
-                  </p>
-
-                  {(step.date || step.time || step.venue) && (
-                    <div className="flex flex-wrap gap-4 text-sm font-medium text-[#0A192F] bg-white/60 p-4 rounded-lg shadow-sm border border-[#1D4A77]/5 mt-4 justify-center md:justify-start">
-                      {step.date && (
-                        <div className="flex items-center gap-2">
-                          <Calendar className="w-4 h-4 text-[#C49B5A]" />
-                          <span>{step.date}</span>
-                        </div>
-                      )}
-                      {step.time && (
-                        <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-[#C49B5A]" />
-                          <span>{step.time}</span>
-                        </div>
-                      )}
-                      {step.venue && (
-                        <div className="flex items-center gap-2">
-                          <MapPin className="w-4 h-4 text-[#C49B5A]" />
-                          <span>{step.venue}</span>
-                        </div>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Tribute Form Section */}
       <TributeForm />
